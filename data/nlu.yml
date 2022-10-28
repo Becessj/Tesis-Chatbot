@@ -1,0 +1,152 @@
+version: "3.1"
+
+nlu:
+- intent: saludo
+  examples: |
+    - hey
+    - hola
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+    - buen dia
+    - me pueden ayudar?
+    - ayuda
+    - hola me ayudas?
+    - por favor ayudame
+    - por fa ayuda
+
+- intent: despedida
+  examples: |
+    - cu
+    - adios
+    - nos vemos después
+    - buenas noches
+    - chau
+    - ten un buen dia
+    - nos veremos
+    - gracias
+    - fue un gusto
+    - adios adios
+    - nos vemos despues
+
+- intent: afirmar
+  examples: |
+    - si
+    - sí
+    - sii
+    - siiii
+    - exacto
+    - claro
+    - obvio
+    - así parece
+    - correcto
+    - aja
+    - ajá
+    - si gracias
+    - afirmativo
+    - bueno si
+    - bueno sí
+
+- intent: negar
+  examples: |
+    - no
+    - no no
+    - nunca
+    - ni idea
+    - no nada
+    - de ninguna manera
+    - no realmente
+
+- intent: pago
+  examples: |
+    - donde pago?
+    - como pago?
+    - dónde se paga?
+    - puedo pagar con tarjeta?
+    - en que banco se paga?
+    - 
+
+- intent: requisitos
+  examples: |
+    - que requisitos necesito?
+    - dónde están los requisitos?
+    - no encuentro los requisitos
+    - necesito requisitos
+    - hay requisitos
+    - no están los requisitos
+    - faltan los requisitos
+
+- intent: costo_solicitud
+  examples: |
+    - cuanto cuesta el trámite?
+    - cuesta mucho
+    - los trámites son gratis?
+
+- intent: plazo_atencion
+  examples: |
+    - cuanto demora un trámite?
+    - demora mucho los trámites?
+    - porque demora mi trámite
+    - estoy esperando muchos dias
+    - no tengo noticias de mi trámite
+    - demoran demasiado
+    - espero mucho
+    - ya paso mucho tiempo
+    - que debo hacer si no atienden mi solicitud dentro del plazo
+
+- intent: bot_duda
+  examples: |
+    - eres un bot?
+    - eres un humano?
+    - estoy hablando con un bot?
+    - estoy hablando con un humano?
+    - pareces un humano
+    - tengo duda que seas un humano
+
+- intent: pregunta_solicitud_online
+  examples: |
+    - ¿Puedo hacer un trámite en línea?
+    - ¿Cómo puedo hacer un trámite en línea?
+    - Proceso de solicitud de trámite en línea
+    - Procedimiento de solicitud de trámite en línea
+    - ¿Qué es el proceso de solicitud de trámite en línea?
+    - ¿Me puede decir el proceso de solicitud de trámite en línea?
+    - ¿Me pueden ayudar con el proceso de solicitud de trámite en línea?
+
+- intent: tramite_grados
+  examples: |
+    - ¿Qué debo hacer para que mi grado o título se encuentre inscrito en el Registro Nacional de Grados y Títulos?
+    - ¿Cómo obtengo la Constancia de Inscripción de mi grado o título?
+    - ¿Puedo tramitar la Constancia de Verificación de Firmas por internet?
+
+- intent: tramite_carnet
+  examples: |
+    - ¿Cómo hago para obtener mi carné universitario? ¿Puedo acercarme a la Sunedu y solicitarlo?
+    - ¿Cuánto es el costo real del carné universitario y cuánto debería cobrar la universidad?
+    - ¿Puedo tramitar la Constancia de Verificación de Firmas por internet?
+
+- intent: tramite_olvide_password
+  examples: |
+    - Olvidé mis claves de acceso
+
+- intent: tramite_tiempo_titulo
+  examples: |
+    - ¿Cuánto tiempo tarda las titulaciones en emitirse?
+    - ¿Cuánto tiempo tarda en salir el bachillerato?
+
+- intent: documentacion_traslado
+  examples: |
+    - ¿Qué documentación se requiere para realizar la solicitud de traslado de expediente?
+
+- intent: documentacion_becas
+  examples: |
+    - ¿A qué becas puedo optar?
+
+- intent: documentacion_continuar_estudios
+  examples: |
+    - Quiero continuar mis estudios en otra universidad, ¿qué trámites tengo que seguir?
+    - Si ya he iniciado estudios universitarios en otro país y deseo continuarlos en Perú ¿qué debo hacer?
+
+- intent: documentacion_grados
+    - ¿Qué es necesario para acceder a una maestría? 
+    - ¿Qué es necesario para acceder a un doctorado?

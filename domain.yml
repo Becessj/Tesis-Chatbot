@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - afirmar
+  - negar
+  - pago
+  - requisitos
+  - plazo_atencion
+  - bot_duda
+actions:
+  - action_ask_costo_tramite
+  - action_ask_requisitos_tramite
+  - action_ask_categoria_tramite
+responses:
+  utter_greet:
+  - text: "Hola, soy un asistente virtual y estaré para poder resolver tus dudas"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Te sirvió?"
+
+  utter_happy:
+  - text: "Genial, cuidate!"
+
+  utter_goodbye:
+  - text: "Adios!"
+
+  utter_iamabot:
+  - text: "Soy un bot, powered by Rasa."
+ 
+  utter_denada:
+  - text: "De nada!"
+
+entities:
+  - nombretramite
+  - costotramite
+  - categoriatramite
+
+slots:
+  nombretramite:
+    type: unfeaturized
+  costotramite:
+    type: unfeaturized
+  categoriatramite:
+    type: unfeaturized
+
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
