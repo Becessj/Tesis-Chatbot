@@ -1,0 +1,49 @@
+version: "3.1"
+
+stories:
+
+- story: horario
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+  - intent: afirmar
+  - action: utter_denada
+
+- story: sad path 2
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: negar
+  - action: utter_despedida
+
+- story: consulta_descripcion
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: consultar_descripcion
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+
+- story: consulta_monto
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: consultar_monto
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+
+- story: consulta_requisitos
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - intent: consultar_requisitos
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada

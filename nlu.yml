@@ -1,0 +1,135 @@
+version: "3.1"
+
+nlu:
+- intent: saludo
+  examples: |
+    - hey
+    - hola
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+    - buen dia
+    - me pueden ayudar?
+    - ayuda
+    - hola me ayudas?
+    - por favor ayudame
+    - por fa ayuda
+
+- intent: despedida
+  examples: |
+    - cu
+    - adios
+    - nos vemos después
+    - buenas noches
+    - chau
+    - ten un buen dia
+    - nos veremos
+    - gracias
+    - fue un gusto
+    - adios adios
+    - nos vemos despues
+
+- intent: afirmar
+  examples: |
+    - si
+    - sí
+    - sii
+    - siiii
+    - exacto
+    - claro
+    - obvio
+    - así parece
+    - correcto
+    - aja
+    - ajá
+    - si gracias
+    - afirmativo
+    - bueno si
+    - bueno sí
+    - gracias
+
+- intent: negar
+  examples: |
+    - no
+    - no no
+    - nunca
+    - ni idea
+    - no nada
+    - de ninguna manera
+    - no realmente
+
+- intent: plazo_atencion
+  examples: |
+    - cuanto demora un trámite?
+    - demora mucho los trámites?
+    - porque demora mi trámite
+    - estoy esperando muchos dias
+    - no tengo noticias de mi trámite
+    - demoran demasiado
+    - espero mucho
+    - ya paso mucho tiempo
+    - que debo hacer si no atienden mi solicitud dentro del plazo
+
+- intent: bot_duda
+  examples: |
+    - eres un bot?
+    - eres un humano?
+    - estoy hablando con un bot?
+    - estoy hablando con un humano?
+    - pareces un humano
+    - tengo duda que seas un humano
+
+- intent: pregunta_solicitud_online
+  examples: |
+    - ¿Puedo hacer un trámite en línea?
+    - ¿Cómo puedo hacer un trámite en línea?
+    - Proceso de solicitud de trámite en línea
+    - Procedimiento de solicitud de trámite en línea
+    - ¿Qué es el proceso de solicitud de trámite en línea?
+    - ¿Me puede decir el proceso de solicitud de trámite en línea?
+    - ¿Me pueden ayudar con el proceso de solicitud de trámite en línea?
+
+- intent: horario_atencion_tramite
+  examples: |
+    - a qué hora puedo realizar mi trámite?
+    - en que horarios se puede hacer un tramite?
+    - el sistema está cerrado
+    - a que hora está abierto el sistema?
+    - a que hora esta activo el sistema?  
+    - a que hora se activa el formulario de solicitud?
+    - no me aparece el formulario de solicitud
+    - no me carga la solicitud
+
+- intent: consultar_descripcion
+  examples: |
+    - ¿Cuál es el trámite de [Nombramiento de Dictaminadores de Tesis para optar el Título de Segunda Especialidad Profesional](valor_buscado)?
+    - cual es el tramite de [inscripción de proyecto de tesis y nombramiento de asesor en segunda especialidad profesional](valor_buscado)?
+    - En que consiste el trámite de [rotulado de diploma de título de segunda especialidad profesional](nombre_tramite)?
+    - en q consiste el tramite de [Certificado de Estudios de la Segunda Especialidad Profesional](nombre_tramite)
+
+- intent: consultar_monto
+  examples: |
+    - Cuánto es el costo del tramite [Traslado Externo](nombre_tramite)?
+    - cuanto es el costo del trámite [constancia de no ser deudor a la escuela de posgrado](nombre_tramite)?
+    - Cuál es el costo del trámite de [Derechos de enseñanza Segunda Especialidad Derechos de enseñanza Segunda Especialidad Educación Especial y Conservación y Restauración de Inmuebles](nombre_tramite)?
+    - cual es el costo del tramite [matrícula regular en segunda especialidad profesional](nombre_tramite)?
+    - Cuánto cuesta el trámite [proceso de admisión a Segunda Especialidad Profesional](nombre_tramite)?
+    - cuanto cuesta el tramite [Ficha de Seguimiento de Maestría y Doctorado](nombre_tramite)?
+
+
+- intent: consultar_requisitos
+  examples: |
+    - Cuáles son los requisitos para el trámite de [Sílabos de Estudios en Maestrías o Doctorados](nombre_tramite)?
+    - cuales son los requisitos para el tramite de [Acta Adicional de Estudios de Maestría o Doctorado](nombre_tramite)?
+    - Qué requisitos necesito para sacar mi [Constancia de Estudios de Maestría o Doctorado](nombre_tramite)?
+    - que requisitos necesito para sacar mi [certificado de estudios de maestría o doctorado](nombre_tramite)?
+    - Qué requisitos necesito para el trámite de [Acto de Juramentación o Promesa de Honor para Pre-grado y Posgrado](nombre_tramite)?
+    - que requisitos necesito para el [Rotulado de diploma de Grado de Maestro, Doctor y Título](nombre_tramite)?
+
+- intent: consultar_pago
+  examples: |
+    - donde pago?
+    - como pago?
+    - dónde se paga?
+    - puedo pagar con tarjeta?
+    - en que banco se paga?

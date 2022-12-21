@@ -5,21 +5,21 @@ intents:
   - despedida
   - afirmar
   - negar
-  - pago
-  - requisitos
-  - plazo_atencion
+#  - pago
+#  - requisitos
+#  - plazo_atencion
+  - horario_atencion_tramite
   - bot_duda
+  - consultar_descripcion
+  - consultar_monto
+  - consultar_requisitos
 actions:
-  - action_ask_costo_tramite
-  - action_ask_requisitos_tramite
-  - action_ask_categoria_tramite
+  - action_consultar_descripcion_tramite
+  - action_consultar_monto_tramite
+  - action_consultar_requisitos_tramite
 responses:
-  utter_greet:
+  utter_saludo:
   - text: "Hola, soy un asistente virtual y estaré para poder resolver tus dudas"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Te sirvió?"
@@ -27,7 +27,7 @@ responses:
   utter_happy:
   - text: "Genial, cuidate!"
 
-  utter_goodbye:
+  utter_despedida:
   - text: "Adios!"
 
   utter_iamabot:
@@ -36,24 +36,21 @@ responses:
   utter_denada:
   - text: "De nada!"
 
+  utter_horario_atencion_tramite:
+  - text: "El horario de atención es de 8:00 a.m. - 1:00 p.m. y 3 p.m. a 5 p.m."
+
 entities:
-  - nombretramite
-  - costotramite
-  - categoriatramite
+  - nombre_tramite
 
 slots:
-  nombretramite:
-    type: unfeaturized
-  costotramite:
-    type: unfeaturized
-  categoriatramite:
-    type: unfeaturized
-
-
-
-
-
+  nombre_tramite:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nombre_tramite
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+
