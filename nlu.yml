@@ -102,10 +102,19 @@ nlu:
 
 - intent: consultar_descripcion
   examples: |
-    - ¿Cuál es el trámite de [Nombramiento de Dictaminadores de Tesis para optar el Título de Segunda Especialidad Profesional](valor_buscado)?
-    - cual es el tramite de [inscripción de proyecto de tesis y nombramiento de asesor en segunda especialidad profesional](valor_buscado)?
-    - En que consiste el trámite de [rotulado de diploma de título de segunda especialidad profesional](nombre_tramite)?
+    - ¿Cuál es el trámite de [Nombramiento de Dictaminadores de Tesis para optar el Título de Segunda Especialidad Profesional](nombre_tramite)?
+    - cual es el tramite de [inscripción de proyecto de tesis y nombramiento de asesor en segunda especialidad profesional](nombre_tramite)?
+    - En qué consiste el trámite de [rotulado de diploma de título de segunda especialidad profesional](nombre_tramite)?
     - en q consiste el tramite de [Certificado de Estudios de la Segunda Especialidad Profesional](nombre_tramite)
+    - en que consiste la [Aprobación de Expediente para optar al Grado Académico de Maestro o Doctor](nombre_tramite)?
+    - De qué trata la [Determinación de fecha, hora y lugar para sustentación de tesis de Maestría, Doctorado](nombre_tramite)?
+    - de que trata el [nombramiento de dictaminadores de tesis para maestría, doctorado](nombre_tramite)
+    - Para qué sirve el [Determinación de Fecha, Hora y Lugar para Sustentación de Tesis o Examen de Suficiencia Profesional o Examen por Servicios a Nivel Profesional](nombre_tramite)?
+    - para que sirve el [nombramiento de dictaminadores de tesis](nombre_tramite)
+    - para que sirve la [rectificación de nombre en base de datos del centro de computo](nombre_tramite)?
+    - Qué es el [Pase para Escolares](nombre_tramite)
+    - que es la [Atención a Visitantes](nombre_tramite)?
+    - para que necesito la [Constancia de no ser deudor a la Universidad](nombre_tramite)?
 
 - intent: consultar_monto
   examples: |
@@ -115,16 +124,35 @@ nlu:
     - cual es el costo del tramite [matrícula regular en segunda especialidad profesional](nombre_tramite)?
     - Cuánto cuesta el trámite [proceso de admisión a Segunda Especialidad Profesional](nombre_tramite)?
     - cuanto cuesta el tramite [Ficha de Seguimiento de Maestría y Doctorado](nombre_tramite)?
-
+    - Cuánto cuesta la [inscripcion del proyecto de tesis y nombramiento de asesor en maestría o doctorado](nombre_tramite)?
+    - Quiero pagar mis [Cursos Dirigidos en Maestría o Doctorado](nombre_tramite).
+    - quiero pagar la [Homologación de Asignaturas en Maestría o Doctorado](nombre_tramite).
+    - cuanto cuesta el [Reinicio de Estudios en Maestría o Doctorado](nombre_tramite)
+    - cuanto se paga por [nombramiento de asesor e inscripción de tema de tesis o trabajo de investigación](nombre_tramite)?
+    - Cuánto se paga por la [Rectificación de Nombre en Base de Datos del Centro de Computo](nombre_tramite)
+    - cuanto está sacar mi [Carné de Biblioteca para Docentes Contratados](nombre_tramite)
+    - cuanto cuesta el [carné de biblioteca para docentes o administrativos](nombre_tramite)?
+    - cuanto esta la [Ficha de Seguimiento Académico](nombre_tramite)?
+    - cuanto esta el [Duplicado de Acta de Evaluación](nombre_tramite)
 
 - intent: consultar_requisitos
   examples: |
     - Cuáles son los requisitos para el trámite de [Sílabos de Estudios en Maestrías o Doctorados](nombre_tramite)?
-    - cuales son los requisitos para el tramite de [Acta Adicional de Estudios de Maestría o Doctorado](nombre_tramite)?
+    - cuales son los requisitos para el tramite de [Acta Adicional de Estudios de Maestría o Doctorado](nombre_tramite)
+    - Cuales son los requisitos para sacar mi [duplicado de diplomas de grado o título: Por motivo de Deterioro o Mutilación del Diploma Original](nombre_tramite)
     - Qué requisitos necesito para sacar mi [Constancia de Estudios de Maestría o Doctorado](nombre_tramite)?
-    - que requisitos necesito para sacar mi [certificado de estudios de maestría o doctorado](nombre_tramite)?
+    - que documentos necesito para sacar mi [certificado de estudios de maestría o doctorado](nombre_tramite)?
     - Qué requisitos necesito para el trámite de [Acto de Juramentación o Promesa de Honor para Pre-grado y Posgrado](nombre_tramite)?
-    - que requisitos necesito para el [Rotulado de diploma de Grado de Maestro, Doctor y Título](nombre_tramite)?
+    - que documentos necesito para el [Rotulado de diploma de Grado de Maestro, Doctor y Título](nombre_tramite)?
+    - qué requisitos son para la [Matrícula y Derechos de Enseñanza en Doctorados](nombre_tramite)
+    - que requisitos son para el [proceso de admision a maestrias](nombre_tramite).
+    - que necesito presentar para el [rotulado de diploma de titulo profesional](nombre_tramite)
+    - que necesito llevar para sacar mi [Carné de Biblioteca para Egresados](nombre_tramite)?
+    - que requisitos piden para sacar [Duplicado carné de Biblioteca para alumnos regulares](nombre_tramite)
+    - Qué requisitos son para sacar mi [Carné de Biblioteca](nombre_tramite)?
+    - que piden para solicitar la [Certificación de Diploma Original](nombre_tramite)
+    - Que piden para solicitar el [Duplicado de Constancia de Matrícula](nombre_tramite)?
+
 
 - intent: consultar_pago
   examples: |
