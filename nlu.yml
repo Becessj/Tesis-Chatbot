@@ -1,9 +1,10 @@
 version: "3.1"
-
 nlu:
 - intent: saludo
   examples: |
     - hey
+    - hi
+    - ola
     - hola
     - buenos dias
     - buenas tardes
@@ -14,7 +15,6 @@ nlu:
     - hola me ayudas?
     - por favor ayudame
     - por fa ayuda
-
 - intent: despedida
   examples: |
     - cu
@@ -28,7 +28,6 @@ nlu:
     - fue un gusto
     - adios adios
     - nos vemos despues
-
 - intent: afirmar
   examples: |
     - si
@@ -47,7 +46,6 @@ nlu:
     - bueno si
     - bueno sí
     - gracias
-
 - intent: negar
   examples: |
     - no
@@ -57,19 +55,17 @@ nlu:
     - no nada
     - de ninguna manera
     - no realmente
-
 - intent: plazo_atencion
   examples: |
     - cuanto demora un trámite?
     - demora mucho los trámites?
-    - porque demora mi trámite
+    - por que demora mi trámite
     - estoy esperando muchos dias
     - no tengo noticias de mi trámite
     - demoran demasiado
     - espero mucho
     - ya paso mucho tiempo
     - que debo hacer si no atienden mi solicitud dentro del plazo
-
 - intent: bot_duda
   examples: |
     - eres un bot?
@@ -78,7 +74,80 @@ nlu:
     - estoy hablando con un humano?
     - pareces un humano
     - tengo duda que seas un humano
-
+- intent: recuerdo_nombre
+  examples: |
+    - cual es mi nombre?
+    - recuerdas mi nombre?
+- intent: consultar_tramites
+  examples: |
+    - tramites?
+    - tramites
+    - tramite
+    - Que tramites tengo?
+    - quiero verificar mi tramite?
+    - que tramites tengo?
+    - que tramites hay?
+- intent: mi_nombre
+  examples: |
+    - yo me llamo [Andrea](name)
+    - [Bryan](name)
+    - mi nombre es [Cristian](name)
+    - me llamo [Daniela](name)
+    - me llamo [Emilio](name)
+    - [Fabiola](name)
+    - soy [Gabriel](name)
+    - [Hugo](name)
+    - mi nombre es [Irene](name)
+    - soy [Jorge](name)
+    - me llamo [Karla](name)
+    - [Leonardo](name)
+    - mi nombre es [Mónica](name)
+    - soy [Nadia](name)
+    - [Oscar](name)
+    - me llamo [Pamela](name)
+    - me llamo [Roberto](name)
+    - mi nombre es [Susana](name)
+    - soy [Sandro](name)
+    - [Teresa](name)
+    - me llamo [Úrsula](name)
+    - mi nombre es [Valerio](name)
+    - soy [Washington](name)
+    - mi nombre es [Xiomara](name)
+    - [Yesenia](name)
+    - me llamo [Zulema](name)
+- intent: mi_codigo
+  examples: |
+    - [141412](codigo)
+    - [150545](codigo)
+    - [162120](codigo)
+    - [182312](codigo)
+    - [191932](codigo)
+    - [200764](codigo)
+    - [211756](codigo)
+    - mi codigo es [144996](codigo)
+    - mi codigo es [1634998](codigo)
+    - mi codigo es [174875](codigo)
+    - mi codigo [191587](codigo)
+    - mi codigo [208967](codigo)
+    - mi codigo [213942](codigo)
+    - mi codigo [220698](codigo)
+    - mi codigo [235340](codigo)
+- intent: del_año
+  examples: |
+    - del año [2023](año)
+    - del año [2022](año)
+    - del año [2019](año)
+    - del año [2018](año)
+    - del año [2017](año)
+    - del [2000](año)
+    - del [2021](año)
+    - del [2001](año)
+    - del [2019](año)
+    - [2023](año)
+    - [2022](año)
+    - [2021](año)
+    - [2019](año)
+    - [2018](año)
 - intent: pregunta_solicitud_online
   examples: |
     - ¿Puedo hacer un trámite en línea?
@@ -88,18 +157,16 @@ nlu:
     - ¿Qué es el proceso de solicitud de trámite en línea?
     - ¿Me puede decir el proceso de solicitud de trámite en línea?
     - ¿Me pueden ayudar con el proceso de solicitud de trámite en línea?
-
 - intent: horario_atencion_tramite
   examples: |
     - a qué hora puedo realizar mi trámite?
     - en que horarios se puede hacer un tramite?
     - el sistema está cerrado
     - a que hora está abierto el sistema?
-    - a que hora esta activo el sistema?  
+    - a que hora esta activo el sistema?
     - a que hora se activa el formulario de solicitud?
     - no me aparece el formulario de solicitud
     - no me carga la solicitud
-
 - intent: consultar_descripcion
   examples: |
     - ¿Cuál es el trámite de [Nombramiento de Dictaminadores de Tesis para optar el Título de Segunda Especialidad Profesional](nombre_tramite)?
@@ -115,7 +182,23 @@ nlu:
     - Qué es el [Pase para Escolares](nombre_tramite)
     - que es la [Atención a Visitantes](nombre_tramite)?
     - para que necesito la [Constancia de no ser deudor a la Universidad](nombre_tramite)?
-
+    - ¿Para qué es la [Carta de Presentación de Decano](nombre_tramite)?
+    - pa q sirve la [matricula de Graduados o Titulados](nombre_tramite)
+    - que son los [Convenios Aprobados por Consejo Universitario.](nombre_tramite)?
+    - de que trata la [admisión primeros puestos de secundaria](nombre_tramite)
+    - que es el examen de [primera oportunidad](nombre_tramite)?
+    - que es un [recurso de reconsideracion](nombre_tramite)
+    - me hablaron de una [pension de ascendientes](nombre_tramite), qué es?
+    - en que consiste la [incorporacion](nombre_tramite)?
+    - que es el trámite de [traslado externo en maestria](nombre_tramite)?
+    - que es la [aprobación de dictamen de tesis](nombre_tramite)?
+    - en que consiste la titulación por [modalidad de servicios](nombre_tramite)?
+    - de que trata la titulación por [modalidad de suficiencia](nombre_tramite)?
+    - quisiera una descripción del [subsidio por fallecimiento de estudiante](nombre_tramite)
+    - quiero una descripción de la [constancia de buena conducta](nombre_tramite)
+    - Me podria explicar para que sirve la [reserva de matricula](nombre_tramite)?
+    - me explicas que es un [traslado externo]?
+    - me dices como es el proceso de [admision de titulados]
 - intent: consultar_monto
   examples: |
     - Cuánto es el costo del tramite [Traslado Externo](nombre_tramite)?
@@ -134,6 +217,27 @@ nlu:
     - cuanto cuesta el [carné de biblioteca para docentes o administrativos](nombre_tramite)?
     - cuanto esta la [Ficha de Seguimiento Académico](nombre_tramite)?
     - cuanto esta el [Duplicado de Acta de Evaluación](nombre_tramite)
+    - cuanto es el costo del trámite [traslado externo](nombre_tramite)
+    - cuanto se cobra por sacar mi [Constancia de Créditos Acumulados o de Egresado](nombre_tramite)?
+    - Cuanto tengo que pagar por el [Certificado de Estudios](nombre_tramite)?
+    - cual es el precio por [Matrícula de Alumno con Traslado Externo](nombre_tramite)
+    - está caro la [Matrícula de Alumnos Regulares](nombre_tramite)?
+    - cuánto debo pagar por [Constancia de Ingreso](nombre_tramite)
+    - cuanto se paga por [Admision para victimas de Terrorismo](nombre_tramite?
+    - cuanto cuesta el ciclo del [CEPRU](nombre_tramite)?
+    - tiene precio el [Recurso de Apelación](nombre_tramite)?
+    - Para solicitar [pension de orfandad](nombre_tramite) cuanto tengo que pagar
+    - cuanto cuesta tramitar el [subsidio de sepelio](nombre_tramite)?
+    - se paga por tramitar [subsidio por fallecimiento](nombre_tramite)?
+    - cual es el precio por tramite de [aprobacion de expediente de segunda especialidad](nombre_tramite)
+    - cuanto se paga por [reválida de título](nombre_tramite)?
+    - cuanto debo pagar por [sustentación de tesis]
+    - cual es el costo para sacar [Grado de Bachiller](nombre_tramite)?
+    - para pedir [subsidio por enfermedad de estudiante] (nombre_tramite) se paga?
+    - cuanto cuesta tramitar [matricula condicionada](nombre_tramite)
+    - cuanto se paga por tramitar [cursos dirigidos](nombre_tramite)?
+    - cual es el costo de tramitar [traslado interno de una escuela a otra de otra facultad](nombre_tramite)?
+    - cual es el monto que debo pagar por tramitar [traslado interno de una escuela a otra de la misma facultad](nombre_tramite)
 
 - intent: consultar_requisitos
   examples: |
@@ -152,8 +256,25 @@ nlu:
     - Qué requisitos son para sacar mi [Carné de Biblioteca](nombre_tramite)?
     - que piden para solicitar la [Certificación de Diploma Original](nombre_tramite)
     - Que piden para solicitar el [Duplicado de Constancia de Matrícula](nombre_tramite)?
-
-
+    - que se necesita para sacar la [constancia de estudios]
+    - Que me piden para el [Reinicio de Estudios](nombre_tramite)?
+    - que requisitos piden para el tramite de [Matrícula Especial que no conlleva a la obtención de Título Profesional](nombre_tramite)
+    - que documentos se presentan para realizar una [Matrícula de Ingresante](nombre_tramite)?
+    - Qué documentos piden por [Admision para personas con discapacidad](nombre_tramite?
+    - Como hago para el [Proceso de Admisión para Deportistas Calificados Destacados](nombre_tramite)
+    - que cosas piden para el examen [Ordinario](nombre_tramite)?
+    - Que debo presentar para solicitar [pension de viudez](nombre_tramite)
+    - Quiero tramitar mi [cesantía](nombre_tramite).
+    - cuales son los requisitos para tramitar el [subsidio por fallecimiento de familiar](nombre_tramite)?
+    - que debo presentar para tramitar [cese por fallecimiento](nombre_tramite)
+    - qué documentos debo presentar para mi [renuncia](nombre_tramite)?
+    - necesito realizar la [convalidacion de asignaturas en maestria](nombre_tramite)
+    - que piden para tramitar la [devolucion de pagos indebidos](nombre_tramite)?
+    - necesito [acceso a la información pública creada por la UNSAAC](nombre_tramite)?
+    - quiero realizar la [modificación del plan de tesis](nombre_tramite), que debo presentar?
+    - que debo presentar para realizar la [subsanacion de asignaturas](nombre_tramite)
+    - necesito los detalles del tramite de [rectificacion de nombre](nombre_tramite)
+    - me puede detallar los requisitos para realizar la [convalidación de asignaturas](nombre_tramite) por favor
 - intent: consultar_pago
   examples: |
     - donde pago?
@@ -161,3 +282,9 @@ nlu:
     - dónde se paga?
     - puedo pagar con tarjeta?
     - en que banco se paga?
+- intent: nlu_fallback
+  examples: |
+    - bien
+- regex: numero_codigo
+  examples: |
+    - [0-9]{1,3}
