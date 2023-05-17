@@ -15,6 +15,7 @@ nlu:
     - hola me ayudas?
     - por favor ayudame
     - por fa ayuda
+
 - intent: despedida
   examples: |
     - cu
@@ -55,11 +56,22 @@ nlu:
     - no nada
     - de ninguna manera
     - no realmente
+
+- intent: bueno
+  examples: |
+    - bueno
+    - perfecto
+
+- intent: malo
+  examples: |
+    - malo
+    - malisimo
+
 - intent: plazo_atencion
   examples: |
     - cuanto demora un trámite?
     - demora mucho los trámites?
-    - por que demora mi trámite
+    - porque demora mi trámite
     - estoy esperando muchos dias
     - no tengo noticias de mi trámite
     - demoran demasiado
@@ -74,10 +86,6 @@ nlu:
     - estoy hablando con un humano?
     - pareces un humano
     - tengo duda que seas un humano
-- intent: recuerdo_nombre
-  examples: |
-    - cual es mi nombre?
-    - recuerdas mi nombre?
 - intent: consultar_tramites
   examples: |
     - tramites?
@@ -87,34 +95,103 @@ nlu:
     - quiero verificar mi tramite?
     - que tramites tengo?
     - que tramites hay?
+
 - intent: mi_nombre
   examples: |
     - yo me llamo [Andrea](name)
+    - [Antonio](name)
+    - me llamo [Angela](name)
+    - soy [Adriano](name)
     - [Bryan](name)
+    - me llamo [Beto](name)
+    - soy [Boris](name)
     - mi nombre es [Cristian](name)
+    - [Carlos](name)
+    - me llamo [Cesar](name)
+    - soy [Carmen](name)
     - me llamo [Daniela](name)
+    - [Diego](name)
+    - soy [David](name)
+    - yo soy [Dayana](name)
     - me llamo [Emilio](name)
+    - soy [Esmeralda](name)
+    - [Ernesto](name)
+    - yo me llamo [Erika](name)
     - [Fabiola](name)
+    - soy [Fernando](name)
+    - me llamo [Fiorela](name)
+    - yo soy [Francisco](name)
+    - me llamo [Grethel](name)
     - soy [Gabriel](name)
+    - [Gilmar](name)
+    - yo me llamo [Gustavo](name)
     - [Hugo](name)
+    - soy [Hermelinda](name)
+    - me llamo [Hillary](name)
     - mi nombre es [Irene](name)
+    - [Irvin](name)
+    - soy [Ismael](name)
+    - me llamo [Ignacia](name)
     - soy [Jorge](name)
+    - yo me llamo [Jesus](name)
+    - [Juliana](name)
+    - mi nombre es [Javiera](name)
     - me llamo [Karla](name)
+    - soy [Karen](name)
+    - [Kristian](name)
+    - mi nombre es [Kenny](name)
     - [Leonardo](name)
+    - me llamo [Luciana](name)
+    - soy [Laura](name)
+    - mi nombre es [Lorena](name)
     - mi nombre es [Mónica](name)
+    - soy [Mario](name)
+    - me llamo [Miriam](name)
+    - [Melissa](name)
     - soy [Nadia](name)
+    - me llamo [Nestor](name)
+    - mi nombre es [Niurka](name)
+    - [Noel](name)
     - [Oscar](name)
+    - me llamo [Omar](name)
+    - mi nombre es [Olenka](name)
+    - yo soy [Oriana](name)
     - me llamo [Pamela](name)
+    - soy [Percy](name)
+    - mi nombre es [Priscila](name)
+    - [Pierina](name)
     - me llamo [Roberto](name)
+    - [Rebeca](name)
+    - soy [Ricardo](name)
+    - mi nombre es [Ruth](name)
+    - yo soy [Sara](name)
     - mi nombre es [Susana](name)
-    - soy [Sandro](name)
+    - yo me llamo [Silvia](name)
+    - [Sandro](name)
     - [Teresa](name)
+    - mi nombre es [Trevor](name)
+    - yo soy [Tania](name)
+    - yo me llamo [Tommy](name)
     - me llamo [Úrsula](name)
+    - yo soy [Ulises](name)
+    - [Urpy](name)
     - mi nombre es [Valerio](name)
+    - yo me llamo [Veronica](name)
+    - [Viviana](name)
+    - yo soy [Vianka](name)
     - soy [Washington](name)
+    - yo me llamo [Wilberto](name)
+    - [Wendy](name)
+    - mi nombre es [Waldo](name)
     - mi nombre es [Xiomara](name)
+    - [Xavier](name)
     - [Yesenia](name)
+    - me llamo [Yorka](name)
+    - mi nombre es [Yerald](name)
+    - yo soy [Yuly](name)
     - me llamo [Zulema](name)
+    - [Zenaida](name)
+    - yo me llamo [Zafiro](name)
 - intent: mi_codigo
   examples: |
     - [141412](codigo)
@@ -238,7 +315,6 @@ nlu:
     - cuanto se paga por tramitar [cursos dirigidos](nombre_tramite)?
     - cual es el costo de tramitar [traslado interno de una escuela a otra de otra facultad](nombre_tramite)?
     - cual es el monto que debo pagar por tramitar [traslado interno de una escuela a otra de la misma facultad](nombre_tramite)
-
 - intent: consultar_requisitos
   examples: |
     - Cuáles son los requisitos para el trámite de [Sílabos de Estudios en Maestrías o Doctorados](nombre_tramite)?
@@ -275,6 +351,7 @@ nlu:
     - que debo presentar para realizar la [subsanacion de asignaturas](nombre_tramite)
     - necesito los detalles del tramite de [rectificacion de nombre](nombre_tramite)
     - me puede detallar los requisitos para realizar la [convalidación de asignaturas](nombre_tramite) por favor
+
 - intent: consultar_pago
   examples: |
     - donde pago?
@@ -282,9 +359,48 @@ nlu:
     - dónde se paga?
     - puedo pagar con tarjeta?
     - en que banco se paga?
-- intent: nlu_fallback
+
+- intent: feed_back
   examples: |
-    - bien
-- regex: numero_codigo
+    - me gusta cómo me ayudaste
+    - creo que necesitas mejorar en este aspecto
+    - Me resultó muy útil la información que me proporcionaste.
+    - Me gusta la forma en que respondes rápidamente a mis preguntas.
+    - Me gustaría tener la opción de hablar con un agente humano en caso de que el chatbot no pueda ayudarme.
+
+- intent: sugerencia
   examples: |
-    - [0-9]{1,3}
+    - sería genial si pudieras enviar notificaciones
+    - Me gustaría que el chatbot tuviera una opción de voz para que pueda usarlo mientras hago otras cosas
+    - Sería genial si el chatbot pudiera proporcionar información más detallada sobre los trámites
+    - Me gustaría que el chatbot tuviera la opción de recordar mis preguntas anteriores para facilitar futuras consultas.
+    - Podrías agregar una opción de chat en vivo con un agente humano si el chatbot no puede resolver mi problema.
+    - Sería genial si el chatbot pudiera proporcionar enlaces relevantes para obtener más información sobre el tema
+
+
+- intent: ubicacion
+  examples: |
+    - busca la ubicación de la UNSAAC
+    - necesito ir a la UNSAAC
+    - necesito desplazarme a la UNSAAC
+    - necesito dirigirme a la UNSAAC
+    - busca la posición de la UNSAAC
+    - dónde está la UNSAAC
+    - dónde se encuentra la UNSAAC
+    - ubicación de la UNSAAC
+    - donde está la UNSAAC
+    - quiero ir a la UNSAAC
+    - localización de la UNSAAC
+    - como puedo llegar a la UNSAAC
+    - cómo llego a la UNSAAC
+    - muestrame la ubicación de la UNSAAC
+    - dime donde está la UNSAAC
+
+
+- regex: año
+  examples: |
+    - \b[0-9]{4}\b
+
+- regex: codigo
+  examples: |
+    - \b[0-9]{6}\b
