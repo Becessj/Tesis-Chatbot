@@ -158,24 +158,7 @@ stories:
   - intent: afirmar
   - action: utter_denada
 
-- story: recordar_nombre
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - action: utter_question_a
-  - intent: mi_nombre
-    entities:
-    - name: juan
-  - slot_was_set:
-    - name: juan
-  - action: utter_question_b
-  - intent: recuerdo_nombre
-  - action: action_say_name
-  - slot_was_set:
-    - name: juan
-  - action: utter_did_that_help
-  - intent: afirmar
-  - action: utter_denada
+
 
 - story: consultar_ubicacion
   steps:
@@ -187,3 +170,77 @@ stories:
   steps:
   - intent: sugerencia
   - action: utter_bueno
+
+#alargamos consulta descripion, monto y requisitos
+- story: largo_consultar_descripcion
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+
+- story: largo_consultar_monto
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+
+
+- story: largo_consultar_requisitos
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
