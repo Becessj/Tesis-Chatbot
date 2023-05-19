@@ -1,54 +1,77 @@
 version: '3.1'
 intents:
 - afirmar
-- ask_me_anything
 - bot_duda
 - consultar_descripcion
 - consultar_monto
 - consultar_pago
 - consultar_requisitos
 - consultar_tramites
+- decir_tramite
 - del_año
 - despedida
+- feed_back
 - horario_atencion_tramite
+- malo
+- bueno
 - mi_codigo
 - mi_nombre
 - negar
 - nlu_fallback
 - plazo_atencion
 - pregunta_solicitud_online
-- recuerdo_nombre
 - saludo
+- sugerencia
+- ubicacion
 actions:
 - action_consultar_descripcion_tramite
 - action_consultar_monto_tramite
 - action_consultar_requisitos_tramite
 - action_consultar_tramites
+- action_custom_fallback
+- action_despedida
 - action_save_conversation
 - action_say_name
-- action_welcome
 - my_fallback_action
 - utter_año
 - utter_codigo
 - utter_denada
 - utter_did_that_help
+- utter_donde_pago
 - utter_goodbye
 - utter_horario_atencion_tramite
 - utter_if_you_want
+- utter_no_te_entiendo
+- utter_que_tramite
 - utter_question_a
 - utter_question_b
 - utter_remember
 - utter_saludo
+- utter_ubicacion
 responses:
   utter_goodbye:
-  - text: Nos vemos pronto, cuídate {name}!
-  - text: Hasta pronto {name}!, ten un excelente día 😇
+  - text: |-
+      Nos vemos pronto, cuidate {name}.
+      si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
+  - text: |-
+      Hasta pronto {name}
+      si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
   utter_saludo:
-  - text: Hola 👋 mi nombre es HatunBot, soy un asistente virtual y con gusto te ayudaré a resolver tus dudas 😁
+  - text: |-
+      Hola👋, soy HatunBot🤖.
+       soy un asistente virtual y estaré para poder resolver tus dudas.
+  utter_no_te_entiendo:
+  - text: |-
+      Ups!
+       No te he entendido. Puedo hacer búsqueda de tus trámites, requisitos, monto y descripción.
+       También puedo ayudarte a averiguar horarios de apertura, localizacion de la UNSAAC.
+  utter_bueno:
+  - text: Muchas gracias {name}, eso me servirá de ayuda.
+  utter_malo:
+  - text: Ups! {name} lo lamento, intentaré mejorar para la próxima.
   utter_did_that_help:
-  - text: Eso te ayudó?? 😊
-  - text: Te sirvió la ayuda?? 🙂
-  - text: Era lo que buscabas?? ☺
+  - text: Eso te ayudo?
+  - text: Te sirvió la ayuda?
   utter_iamabot:
   - text: Soy un bot artificial listo para servirte 💪
   - text: Si! Soy un asistente virtual y haré mi mejor esfuerzo por ayudarte 😃
@@ -56,32 +79,36 @@ responses:
   - text: Qué bueno que te haya servido! 😃
   - text: Gracias a ti por confiar en mí! 😊
   utter_horario_atencion_tramite:
-  - text: El horario de atención es de 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
-  - text: Puedes realizar tus trámites entre las 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⏰
+  - text: |-
+      El horario de atención es de 
+
+       8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
+  - text: Puedes realizar tus trámites entre las \n\n 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⏰
   utter_question_a:
   - text: ¿Cúal es tu nombre?
-  - text: ¿Cómo te llamas?
-  - text: ¿Me podrías decir tu nombre?
+  - text: ¿Como te llamas?
+  - text: ¿Me podrias decir tu nombre?
   utter_question_b:
-  - text: ¿Qué deseas hacer {name}?
+  - text: ¿Qué deseas hacer {name} ?
   - text: ¿Qué te gustaria hacer {name}?
   - text: ¿Qué quisieras hacer {name}?
-    buttons:
-    - title: Ayuda
-      payload: utter_if_you_want
-    - title: Tramites
-      payload: action_consultar_tramites
+  utter_ubicacion:
+  - text: La UNSAAC se encuentra en la Av. de La Cultura 773.
   utter_año:
   - text: Podrías indicarme el año?
-  - text: De qué año?
+  - text: De que año ?
   utter_codigo:
-  - text: Podrías indicarme tu código?
-  - text: Cual es tu código universitario?
+  - text: Podrías indicarme tu codigo?
+  - text: Cual es tu codigo universitario?
   utter_remember:
-  - text: Gracias {name}. Lo recordaré.
+  - text: Gracias {name}. Lo recordare.
   utter_tramite_no_encontrado:
   - text: No pude encontrar ningun trámite con ese nombre 🙁
   - text: Lo siento, no encontré el trámite que buscas ☹
+  utter_donde_pago:
+  - text: Puedes pagar aqui http://servicios.unsaac.edu.pe/recaudacion/ 💻
+  utter_que_tramite:
+  - text: Entiendo, ¿indicame de que trámite?
 entities:
 - name
 - nombre_tramite
@@ -90,32 +117,28 @@ entities:
 slots:
   nombre_tramite:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: nombre_tramite
-      #value: Requisitos tramite
   name:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: name
-      #value: Cristian
   año:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: año
-      #value: 2023
   codigo:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: codigo
-      #value: 144996
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
