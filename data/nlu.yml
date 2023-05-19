@@ -15,7 +15,6 @@ nlu:
     - hola me ayudas?
     - por favor ayudame
     - por fa ayuda
-
 - intent: despedida
   examples: |
     - cu
@@ -56,17 +55,14 @@ nlu:
     - no nada
     - de ninguna manera
     - no realmente
-
 - intent: bueno
   examples: |
     - bueno
     - perfecto
-
 - intent: malo
   examples: |
     - malo
     - malisimo
-
 - intent: plazo_atencion
   examples: |
     - cuanto demora un trámite?
@@ -86,6 +82,7 @@ nlu:
     - estoy hablando con un humano?
     - pareces un humano
     - tengo duda que seas un humano
+
 - intent: consultar_tramites
   examples: |
     - tramites?
@@ -95,7 +92,6 @@ nlu:
     - quiero verificar mi tramite?
     - que tramites tengo?
     - que tramites hay?
-
 - intent: mi_nombre
   examples: |
     - yo me llamo [Andrea](name)
@@ -276,10 +272,13 @@ nlu:
     - Me podria explicar para que sirve la [reserva de matricula](nombre_tramite)?
     - me explicas que es un [traslado externo]?
     - me dices como es el proceso de [admision de titulados]
+
 - intent: consultar_monto
   examples: |
     - Cuánto es el costo del tramite [Traslado Externo](nombre_tramite)?
+    - [Traslado Externo](nombre_tramite)?
     - cuanto es el costo del trámite [constancia de no ser deudor a la escuela de posgrado](nombre_tramite)?
+    - [constancia de no ser deudor a la escuela de posgrado](nombre_tramite)?
     - Cuál es el costo del trámite de [Derechos de enseñanza Segunda Especialidad Derechos de enseñanza Segunda Especialidad Educación Especial y Conservación y Restauración de Inmuebles](nombre_tramite)?
     - cual es el costo del tramite [matrícula regular en segunda especialidad profesional](nombre_tramite)?
     - Cuánto cuesta el trámite [proceso de admisión a Segunda Especialidad Profesional](nombre_tramite)?
@@ -351,7 +350,7 @@ nlu:
     - que debo presentar para realizar la [subsanacion de asignaturas](nombre_tramite)
     - necesito los detalles del tramite de [rectificacion de nombre](nombre_tramite)
     - me puede detallar los requisitos para realizar la [convalidación de asignaturas](nombre_tramite) por favor
-
+    
 - intent: consultar_pago
   examples: |
     - donde pago?
@@ -359,22 +358,37 @@ nlu:
     - dónde se paga?
     - puedo pagar con tarjeta?
     - en que banco se paga?
-
+    - como pago?
+    - como se paga?
+    - donde debo pagar?
+    - como debo pagar?
+    - se paga por la web?
+    - debo pagar por internet?
+    - debo pagar online?
+    - se puede pagar online?
+    - como pago por internet?
+    - como puedo pagar online?
+    - se puede pagar con tarjeta?
+    - es posible pagar online?
+    - puedo pagar con tarjeta?
+    - es posible pagar con tarjeta online?
+    - donde puedo pagar con tarjeta?
+    
 - intent: feed_back
   examples: |
     - me gusta cómo me ayudaste
     - creo que necesitas mejorar en este aspecto
-    - Me resultó muy útil la información que me proporcionaste.
-    - Me gusta la forma en que respondes rápidamente a mis preguntas.
-    - Me gustaría tener la opción de hablar con un agente humano en caso de que el chatbot no pueda ayudarme.
+    - Me resultó muy útil la información que me proporcionaste
+    - Me gusta la forma en que respondes rápidamente a mis preguntas
+    - Me gustaría tener la opción de hablar con un agente humano en caso de que el chatbot no pueda ayudarme
 
 - intent: sugerencia
   examples: |
     - sería genial si pudieras enviar notificaciones
     - Me gustaría que el chatbot tuviera una opción de voz para que pueda usarlo mientras hago otras cosas
     - Sería genial si el chatbot pudiera proporcionar información más detallada sobre los trámites
-    - Me gustaría que el chatbot tuviera la opción de recordar mis preguntas anteriores para facilitar futuras consultas.
-    - Podrías agregar una opción de chat en vivo con un agente humano si el chatbot no puede resolver mi problema.
+    - Me gustaría que el chatbot tuviera la opción de recordar mis preguntas anteriores para facilitar futuras consultas
+    - Podrías agregar una opción de chat en vivo con un agente humano si el chatbot no puede resolver mi problema
     - Sería genial si el chatbot pudiera proporcionar enlaces relevantes para obtener más información sobre el tema
 
 
@@ -396,11 +410,67 @@ nlu:
     - muestrame la ubicación de la UNSAAC
     - dime donde está la UNSAAC
 
-
+- intent: decir_tramite
+  examples: |
+    - queria consultar acerca de un tramite
+    - en que consiste el tramite
+    - en q consiste el tramite
+    - de que trata el tramite
+    - para que sirve el tramite
+    - para que es el tramite
+    - de que trata el tramite
+    - me hablaron de un tramite
+    - de que trata el tramite 
+    - quisiera una descripcion de un tramite
+    - quiero una descripcion de un tramite
+    - me podrias explicar para que sirve un tramite
+    - me explicas que es un tramite
+    - me dices como es el proceso de un tramite
+    - en que consiste el nombre de un tramite
+    - cuanto cuesta un tramite
+    - cuanto es el costo de un tramite
+    - cual es el costo de un tramite
+    - cuanto cuesta un tramite
+    - cuanto cuesta este tramite
+    - quiero pagar un tramite
+    - cuanto se paga por un tramite
+    - cuanto esta un tramite
+    - cuanto esta un tramite
+    - cuanto cobran por un tramite
+    - cuanto tengo que pagar por un tramite
+    - cual es el precio de un tramite
+    - cuanto debo pagar por un tramite
+    - cuanto se paga por un tramite
+    - el tramite tiene precio
+    - cuanto cuesta hacer un tramite por aqui
+    - cual es el precio por tramite
+    - cuanto se paga por un tramite
+    - cuanto cuesta tramitar un documento
+    - cuanto se paga por un tramite
+    - cual es el monto que debo pagar por tramitar
+    - me puedes indicar los requisitos de un tramite
+    - cuales son los requisitos para un tramite
+    - que requisitos necesito para un tramite
+    - que documentos necesito para un tramite
+    - que requisitos son para un tramite
+    - que necesito presentar para un tramite virtual
+    - que necesito llevar para tramitar un documento
+    - que piden para solicitar un tramite
+    - que me piden para un tramite
+    - que cosas piden para un tramite
+    - que documentos se presentan para un tramite
+    - como hago para realizar un tramite
+    - que cosas piden para un tramite
+    - que debo presentar para solicitar un tramite virtual
+    - cuales son los requisitos para un tramite
+    - necesito los detalles para realizar un tramite
+    - me puede detallar los requisitos para realizar un tramite
+    
 - regex: año
   examples: |
     - \b[0-9]{4}\b
-
 - regex: codigo
   examples: |
     - \b[0-9]{6}\b
+
+
