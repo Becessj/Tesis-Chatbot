@@ -1,93 +1,102 @@
 version: "3.1"
 
 stories:
-- story: consultar_tramites_bueno
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - action: utter_question_a
-  - intent: mi_nombre
-    entities:
-    - name: cristian
-  - slot_was_set:
-    - name: cristian
-  - action: utter_question_b
-  - intent: consultar_tramites
-  - action: utter_codigo
-  - intent: mi_codigo
-    entities:
-    - codigo: '144996'
-  - slot_was_set:
-    - codigo: '144996'
-  - action: utter_año
-  - intent: del_año
-    entities:
-    - año: '2023'
-  - slot_was_set:
-    - año: '2023'
-  - action: action_consultar_tramites
-  - slot_was_set:
-    - año: '2023'
-  - slot_was_set:
-    - codigo: '144996'
-  - action: utter_did_that_help
-  - intent: afirmar
-  - action: action_despedida
-  - intent: bueno
-  - action: utter_bueno
 
-- story: consultar_tramites_malo
+- story: story_despedida
   steps:
-  - intent: saludo
-  - action: utter_saludo
-  - action: utter_question_a
-  - intent: mi_nombre
-    entities:
-    - name: cristian
-  - slot_was_set:
-    - name: cristian
-  - action: utter_question_b
-  - intent: consultar_tramites
-  - action: utter_codigo
-  - intent: mi_codigo
-    entities:
-    - codigo: '144996'
-  - slot_was_set:
-    - codigo: '144996'
-  - action: utter_año
-  - intent: del_año
-    entities:
-    - año: '2023'
-  - slot_was_set:
-    - año: '2023'
-  - action: action_consultar_tramites
-  - slot_was_set:
-    - año: '2023'
-  - slot_was_set:
-    - codigo: '144996'
-  - action: utter_did_that_help
-  - intent: afirmar
-  - action: action_despedida
-  - intent: malo
-  - action: utter_malo
+  - intent: despedidas
+  - action: utter_goodbye
 
-- story: horario_de_atencion
+- story: story_plazo_atencion
   steps:
   - intent: saludo
   - action: utter_saludo
   - action: utter_question_a
   - intent: mi_nombre
     entities:
-    - name: juan
+    - name: Gabriel
   - slot_was_set:
-    - name: juan
+    - name: Gabriel
   - action: utter_question_b
-  - intent: horario_atencion_tramite
-  - action: utter_horario_atencion_tramite
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
 
-- story: mi_nombre
+- story: story_bot_duda
+  steps:
+  - intent: bot_duda
+  - action: utter_iamabot
+
+
+- story: story_consultar_tramites_bueno
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_año
+  - intent: del_año
+    entities:
+    - año: '2023'
+  - slot_was_set:
+    - año: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - año: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_bueno
+
+- story: story_consultar_tramites_malo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_año
+  - intent: del_año
+    entities:
+    - año: '2023'
+  - slot_was_set:
+    - año: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - año: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: negar
+  - action: utter_malo
+
+- story: story_mi_nombre
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -101,9 +110,53 @@ stories:
   - intent: negar
   - action: utter_goodbye
 
+- story: story_pregunta_solicitud_online
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: juan
+  - slot_was_set:
+    - name: juan
+  - action: utter_question_b
+  - intent: pregunta_solicitud_online
+  - action: utter_tramite_online
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
 
+- story: story_horario_de_atencion
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: juan
+  - slot_was_set:
+    - name: juan
+  - action: utter_question_b
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
 
-- story: consultar_descripcion
+- story: story_consultar_descripcion_sn
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+
+- story: story_consultar_descripcion
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -120,59 +173,7 @@ stories:
   - intent: afirmar
   - action: utter_denada
 
-- story: consultar_requisitos
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - action: utter_question_a
-  - intent: mi_nombre
-  - action: utter_question_b
-  - intent: consultar_requisitos
-    entities:
-    - nombre_tramite: duplicado de constancia de matricula
-  - slot_was_set:
-    - nombre_tramite: duplicado de constancia de matricula
-  - action: action_consultar_requisitos_tramite
-  - action: utter_did_that_help 
-  - intent: afirmar
-  - action: utter_denada
-
-- story: consultar_monto
-  steps:
-  - intent: saludo
-  - action: utter_saludo
-  - action: utter_question_a
-  - intent: mi_nombre
-    entities:
-    - name: juan
-  - slot_was_set:
-    - name: juan
-  - action: utter_question_b
-  - intent: consultar_monto
-    entities:
-    - nombre_tramite: traslado externo
-  - slot_was_set:
-    - nombre_tramite: traslado externo
-  - action: action_consultar_monto_tramite
-  - action: utter_did_that_help
-  - intent: afirmar
-  - action: utter_denada
-
-
-
-- story: consultar_ubicacion
-  steps:
-  - intent: ubicacion
-  - action: utter_ubicacion
-
-
-- story: sugerir
-  steps:
-  - intent: sugerencia
-  - action: utter_bueno
-
-#alargamos consulta descripion, monto y requisitos
-- story: largo_consultar_descripcion
+- story: story_consultar_descripcion_solotramite
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -196,7 +197,85 @@ stories:
   - intent: afirmar
   - action: utter_denada
 
-- story: largo_consultar_monto
+- story: story_consultar_descripcion_solotramite_sn
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+
+- story: story_consultar_requisitos
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+  - action: utter_question_b
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: duplicado de constancia de matricula
+  - slot_was_set:
+    - nombre_tramite: duplicado de constancia de matricula
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+
+- story: story_consultar_requisitos_solotramite
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+
+
+- story: story_consultar_monto
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: juan
+  - slot_was_set:
+    - name: juan
+  - action: utter_question_b
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: traslado externo
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+
+
+- story: story_consultar_monto_solotramite
   steps:
   - intent: saludo
   - action: utter_saludo
@@ -221,26 +300,42 @@ stories:
   - action: utter_denada
 
 
-- story: largo_consultar_requisitos
+- story: story_consultar_pago
   steps:
   - intent: saludo
   - action: utter_saludo
   - action: utter_question_a
   - intent: mi_nombre
     entities:
-    - name: cristian
-    - name: juan
+    - name: Gabriel
   - slot_was_set:
-    - name: cristian
+    - name: Gabriel
   - action: utter_question_b
-  - intent: decir_tramite
-  - action: utter_que_tramite
-  - intent: consultar_requisitos_solotramite
-    entities:
-    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
-  - slot_was_set:
-    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
-  - action: action_consultar_requisitos_tramite
+  - intent: consultar_pago
+  - action: utter_donde_pago
   - action: utter_did_that_help
-  - intent: afirmar
+  - intent: despedidas
   - action: utter_denada
+
+- story: story_feedback
+  steps:
+  - intent: feed_back
+  - action: utter_bueno
+
+- story: story_sugerir
+  steps:
+  - intent: sugerencia
+  - action: utter_bueno
+
+- story: story_consultar_ubicacion
+  steps:
+  - intent: ubicacion
+  - action: utter_ubicacion
+
+- story: story_fueradelugar
+  steps:
+  - action: utter_no_te_entiendo
+
+
+
+
