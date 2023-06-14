@@ -3,9 +3,12 @@ intents:
 - afirmar
 - bot_duda
 - consultar_descripcion
+- consultar_descripcion_solotramite
 - consultar_monto
+- consultar_monto_solotramite
 - consultar_pago
 - consultar_requisitos
+- consultar_requisitos_solotramite
 - consultar_tramites
 - decir_tramite
 - del_año
