@@ -15,22 +15,20 @@ nlu:
     - hola me ayudas?
     - por favor ayudame
     - por fa ayuda
-- intent: despedida
+
+- intent: despedidas
   examples: |
     - cu
     - adios
     - nos vemos despues
-    - buenas noches
     - chau
     - ten un buen dia
     - nos veremos
-    - gracias
     - fue un gusto
     - adios adios
-    - nos vemos despues
+
 - intent: afirmar
   examples: |
-    - si
     - si
     - sii
     - siiii
@@ -40,15 +38,15 @@ nlu:
     - asi parece
     - correcto
     - aja
-    - aja
     - si gracias
+    - si amigo
     - afirmativo
-    - bueno si
     - bueno si
     - gracias
     - efectivamente
     - si muchas gracias
     - si me sirvio tu ayuda
+
 - intent: negar
   examples: |
     - no
@@ -67,7 +65,7 @@ nlu:
     - no del todo
     - creo que no pero gracias
     - la verdad no
- 
+
 - intent: plazo_atencion
   examples: |
     - cuanto demora un tramite?
@@ -85,6 +83,7 @@ nlu:
     - llevo meses esperando
     - mi tramite no avanza
     - me dijeron que me atenderian el tramite en un mes
+
 - intent: bot_duda
   examples: |
     - eres un bot?
@@ -110,6 +109,7 @@ nlu:
     - quiero verificar mi tramite?
     - que tramites tengo?
     - que tramites hay?
+
 - intent: mi_nombre
   examples: |
     - yo me llamo [Andrea](name)
@@ -125,6 +125,8 @@ nlu:
     - soy [Carmen](name)
     - me llamo [Daniela](name)
     - [Diego](name)
+    - mi nombre es [Juan](name)
+    - [Juan](name)
     - soy [David](name)
     - yo soy [Dayana](name)
     - me llamo [Emilio](name)
@@ -206,6 +208,8 @@ nlu:
     - me llamo [Zulema](name)
     - [Zenaida](name)
     - yo me llamo [Zafiro](name)
+    - soy [Gabriel](name)
+
 - intent: mi_codigo
   examples: |
     - [141412](codigo)
@@ -223,6 +227,7 @@ nlu:
     - mi codigo [213942](codigo)
     - mi codigo [220698](codigo)
     - mi codigo [235340](codigo)
+
 - intent: del_año
   examples: |
     - del año [2023](año)
@@ -239,6 +244,7 @@ nlu:
     - [2021](año)
     - [2019](año)
     - [2018](año)
+
 - intent: pregunta_solicitud_online
   examples: |
     - ¿Puedo hacer un tramite en linea?
@@ -254,6 +260,8 @@ nlu:
     - ¿Me puede decir el proceso de solicitud de tramite en linea?
     - ¿Me pueden ayudar con el proceso de solicitud de tramite en linea?
     - una consulta, como realizo mi tramite en linea?
+
+
 - intent: horario_atencion_tramite
   examples: |
     - a que hora puedo realizar mi tramite?
@@ -271,6 +279,8 @@ nlu:
     - no puedo realizar mi solicitud, el sistema esta cerrado
     - por que no puedo ingresar mi solicitud al sistema?
     - no puedo hacer mi tramite
+
+
 - intent: consultar_descripcion
   examples: |
     - ¿Cual es el tramite de [Nombramiento de Dictaminadores de Tesis para optar el Titulo de Segunda Especialidad Profesional](nombre_tramite)?
@@ -319,7 +329,6 @@ nlu:
     - [Pase para Escolares](nombre_tramite)
     - [Atencion a Visitantes](nombre_tramite)?
     - [Constancia de no ser deudor a la Universidad](nombre_tramite)?
-    - [Constancia de no ser deudor a la Universidad](nombre_tramite)?
     - [Carta de Presentacion de Decano](nombre_tramite)?
     - [matricula de Graduados o Titulados](nombre_tramite)
     - [Convenios Aprobados por Consejo Universitario](nombre_tramite)?
@@ -335,7 +344,6 @@ nlu:
     - [subsidio por fallecimiento de estudiante](nombre_tramite)
     - [constancia de buena conducta](nombre_tramite)
     - [reserva de matricula](nombre_tramite)?
-    - [traslado externo](nombre_tramite)?
     - [admision de titulados](nombre_tramite)?
 
 
@@ -379,6 +387,7 @@ nlu:
     - cual es el costo de tramitar [traslado interno de una escuela a otra de otra facultad](nombre_tramite)?
     - cual es el monto que debo pagar por tramitar [traslado interno de una escuela a otra de la misma facultad](nombre_tramite)
 
+
 - intent: consultar_monto_solotramite
   examples: |
     - [Traslado Externo](nombre_tramite)?
@@ -418,6 +427,7 @@ nlu:
     - [cursos dirigidos](nombre_tramite)?
     - [traslado interno de una escuela a otra de otra facultad](nombre_tramite)?
     - [traslado interno de una escuela a otra de la misma facultad](nombre_tramite)?
+
 - intent: consultar_requisitos
   examples: |
     - Cuales son los requisitos para el tramite de [Silabos de Estudios en Maestrias o Doctorados](nombre_tramite)?
@@ -510,7 +520,7 @@ nlu:
     - se puede pagar con tarjeta de debito?
     - se puede pagar con tarjeta de credito?
     - quiero pagar con tarjeta
-    
+
 - intent: feed_back
   examples: |
     - me gusta como me ayudaste
@@ -539,7 +549,6 @@ nlu:
     - donde esta la UNSAAC
     - donde se encuentra la UNSAAC
     - ubicacion de la UNSAAC
-    - donde esta la UNSAAC
     - quiero ir a la UNSAAC
     - localizacion de la UNSAAC
     - como puedo llegar a la UNSAAC
@@ -549,6 +558,7 @@ nlu:
     - donde queda la UNSAAC
     - como llego a la universidad?
 
+
 - intent: decir_tramite
   examples: |
     - queria consultar acerca de un tramite
@@ -557,9 +567,7 @@ nlu:
     - de que trata el tramite
     - para que sirve el tramite
     - para que es el tramite
-    - de que trata el tramite
     - me hablaron de un tramite
-    - de que trata el tramite 
     - quisiera una descripcion de un tramite
     - quiero una descripcion de un tramite
     - me podrias explicar para que sirve un tramite
@@ -569,23 +577,18 @@ nlu:
     - cuanto cuesta un tramite
     - cuanto es el costo de un tramite
     - cual es el costo de un tramite
-    - cuanto cuesta un tramite
     - cuanto cuesta este tramite
     - quiero pagar un tramite
     - cuanto se paga por un tramite
-    - cuanto esta un tramite
     - cuanto esta un tramite
     - cuanto cobran por un tramite
     - cuanto tengo que pagar por un tramite
     - cual es el precio de un tramite
     - cuanto debo pagar por un tramite
-    - cuanto se paga por un tramite
     - el tramite tiene precio
     - cuanto cuesta hacer un tramite por aqui
     - cual es el precio por tramite
-    - cuanto se paga por un tramite
     - cuanto cuesta tramitar un documento
-    - cuanto se paga por un tramite
     - cual es el monto que debo pagar por tramitar
     - me puedes indicar los requisitos de un tramite
     - cuales son los requisitos para un tramite
@@ -599,17 +602,14 @@ nlu:
     - que cosas piden para un tramite
     - que documentos se presentan para un tramite
     - como hago para realizar un tramite
-    - que cosas piden para un tramite
     - que debo presentar para solicitar un tramite virtual
-    - cuales son los requisitos para un tramite
     - necesito los detalles para realizar un tramite
     - me puede detallar los requisitos para realizar un tramite
-    
+
+
 - regex: año
   examples: |
     - \b[0-9]{4}\b
 - regex: codigo
   examples: |
     - \b[0-9]{6}\b
-
-
