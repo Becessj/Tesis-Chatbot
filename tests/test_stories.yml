@@ -1,91 +1,271 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
 stories:
-- story: happy path 1
-  steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
 
-- story: happy path 2
+- story: test 1
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      hola
+    intent: saludo
+  - action: utter_question_a
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+     mi nombre es juan
+    intent: mi_nombre
+  - action: utter_question_b
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
+     por que demora mi tramite
+    intent: plazo_atencion
+  - action: utter_plazo_atencion
   - action: utter_did_that_help
   - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
 
-- story: sad path 2
+- story: test 2
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+     estoy hablando con un bot?
+    intent: bot_duda
+  - action: utter_iamabot 
+
+- story: test 3
+  steps:
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es cristian
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+     Que tramites tengo?
+    intent: consultar_tramites
+  - action: utter_codigo
+  - user: |
+     mi codigo es 144996
+    intent: mi_codigo
+  - slot_was_set:
+    - codigo: 144996
+  - action: utter_año
+  - user: |
+     del 2023
+    intent: del_año 
+  - slot_was_set:
+    - año: 2023
+  - action: action_consultar_tramites
   - action: utter_did_that_help
   - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
 
-- story: sad path 3
+
+
+- story: test 4
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
+      hola
+    intent: saludo
+  - action: utter_question_a
   - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
+     mi nombre es andrea
+    intent: mi_nombre
+
+
+- story: test 5
+  steps:
+  - user: |
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es juan
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+     ¿Como puedo hacer un tramite en linea?
+    intent: pregunta_solicitud_online
+  - action: utter_tramite_online
   - action: utter_did_that_help
   - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
 
-- story: say goodbye
+- story: test 6
   steps:
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es urpy
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+     ¿a que hora puedo realizar mi tramite?
+    intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
 
-- story: bot challenge
+
+- story: test 7
   steps:
   - user: |
-      are you a bot?
-    intent: bot_challenge
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es urpy
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+     ¿a que hora puedo realizar mi tramite?
+    intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+
+- story: test 8
+  steps:
+  - user: |
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es cristian
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+     para que necesito la constancia de no ser deudor a la universidad
+    intent: consultar_descripcion
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+
+- story: test 9
+  steps:
+  - user: |
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es cristian
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+      Que piden para solicitar el duplicado de constancia de matricula
+    intent: consultar_requisitos
+  - slot_was_set:
+    - nombre_tramite: duplicado de constancia de matricula
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 10
+  steps:
+  - user: |
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es cristian
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+      Cuanto es el costo del tramite traslado externo
+    intent: consultar_monto
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+
+- story: test 11
+  steps:
+  - user: |
+      hola
+    intent: saludo
+  - action: utter_question_a
+  - user: |
+     mi nombre es juan
+    intent: mi_nombre
+  - action: utter_question_b
+  - user: |
+     donde pago?
+    intent: consultar_pago
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 11
+  steps:
+  - user: |
+      necesito ir a la UNSAAC
+    intent: ubicacion
+  - action: utter_ubicacion
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+
+- story: test 12
+  steps:
+  - user: |
+     me gusta como me ayudaste
+    intent: feed_back
+  - action: utter_bueno
+
+- story: test 13
+  steps:
+  - user: |
+     sería genial si pudieras enviar notificaciones
+    intent: sugerencia
+  - action: utter_bueno
+
+
+- story: test 14
+  steps:
+  - user: |
+     adios!
+    intent: despedidas
+  - action: utter_goodbye
+
+
+- story: test 15
+  steps:
+  - user: |
+     eres un bot?
+    intent: bot_duda
   - action: utter_iamabot
