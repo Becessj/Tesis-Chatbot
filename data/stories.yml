@@ -186,7 +186,7 @@ stories:
   - action: utter_question_b
   - intent: decir_tramite
   - action: utter_que_tramite
-  - intent: consultar_descripcion
+  - intent: consultar_descripcion_solotramite
     entities:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - slot_was_set:
@@ -210,7 +210,7 @@ stories:
   - action: utter_question_b
   - intent: decir_tramite
   - action: utter_que_tramite
-  - intent: consultar_monto
+  - intent: consultar_monto_solotramite
     entities:
     - nombre_tramite: Traslado Externo
   - slot_was_set:
@@ -235,7 +235,7 @@ stories:
   - action: utter_question_b
   - intent: decir_tramite
   - action: utter_que_tramite
-  - intent: consultar_requisitos
+  - intent: consultar_requisitos_solotramite
     entities:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - slot_was_set:
