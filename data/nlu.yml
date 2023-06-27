@@ -15,7 +15,6 @@ nlu:
     - hola me ayudas?
     - por favor ayudame
     - por fa ayuda
-
 - intent: despedidas
   examples: |
     - cu
@@ -26,7 +25,6 @@ nlu:
     - nos veremos
     - fue un gusto
     - adios adios
-
 - intent: afirmar
   examples: |
     - si
@@ -38,15 +36,11 @@ nlu:
     - asi parece
     - correcto
     - aja
-    - si gracias
     - si amigo
     - afirmativo
     - bueno si
-    - gracias
     - efectivamente
-    - si muchas gracias
     - si me sirvio tu ayuda
-
 - intent: negar
   examples: |
     - no
@@ -65,7 +59,27 @@ nlu:
     - no del todo
     - creo que no pero gracias
     - la verdad no
-
+  
+- intent: agradecer
+    - Gracias
+    - Muchas gracias
+    - gracias por la ayuda
+    - graciassss
+    - muchas muchas gracias
+    - grx
+    - Era lo que necesitaba, gracias
+    - muchas gracias
+    - gracias
+    - de verdad gracias
+    - te lo agradezco
+    - Thank you
+    - Thanks
+    - Agradecido
+    - En serio gracias
+    - grax
+    - Gracias de verdad
+    - Gracias por tu ayuda
+    - Justo lo que necesitaba gracias
 - intent: plazo_atencion
   examples: |
     - cuanto demora un tramite?
@@ -83,7 +97,6 @@ nlu:
     - llevo meses esperando
     - mi tramite no avanza
     - me dijeron que me atenderian el tramite en un mes
-
 - intent: bot_duda
   examples: |
     - eres un bot?
@@ -99,7 +112,6 @@ nlu:
     - no creo que seas una persona
     - eres una persona?
     - estoy hablando con una persona?
-
 - intent: consultar_tramites
   examples: |
     - tramites?
@@ -109,7 +121,6 @@ nlu:
     - quiero verificar mi tramite?
     - que tramites tengo?
     - que tramites hay?
-
 - intent: mi_nombre
   examples: |
     - yo me llamo [Andrea](name)
@@ -208,8 +219,6 @@ nlu:
     - me llamo [Zulema](name)
     - [Zenaida](name)
     - yo me llamo [Zafiro](name)
-    - soy [Gabriel](name)
-
 - intent: mi_codigo
   examples: |
     - [141412](codigo)
@@ -227,7 +236,6 @@ nlu:
     - mi codigo [213942](codigo)
     - mi codigo [220698](codigo)
     - mi codigo [235340](codigo)
-
 - intent: del_anio
   examples: |
     - del año [2023](anio)
@@ -244,7 +252,6 @@ nlu:
     - [2021](anio)
     - [2019](anio)
     - [2018](anio)
-
 - intent: pregunta_solicitud_online
   examples: |
     - ¿Puedo hacer un tramite en linea?
@@ -260,8 +267,6 @@ nlu:
     - ¿Me puede decir el proceso de solicitud de tramite en linea?
     - ¿Me pueden ayudar con el proceso de solicitud de tramite en linea?
     - una consulta, como realizo mi tramite en linea?
-
-
 - intent: horario_atencion_tramite
   examples: |
     - a que hora puedo realizar mi tramite?
@@ -279,8 +284,6 @@ nlu:
     - no puedo realizar mi solicitud, el sistema esta cerrado
     - por que no puedo ingresar mi solicitud al sistema?
     - no puedo hacer mi tramite
-
-
 - intent: consultar_descripcion
   examples: |
     - ¿Cual es el tramite de [Nombramiento de Dictaminadores de Tesis para optar el Titulo de Segunda Especialidad Profesional](nombre_tramite)?
@@ -313,7 +316,6 @@ nlu:
     - Me podria explicar para que sirve la [reserva de matricula](nombre_tramite)?
     - me explicas que es un [traslado externo]?
     - me dices como es el proceso de [admision de titulados]
-
 - intent: consultar_descripcion_solotramite
   examples: |
     - [Nombramiento de Dictaminadores de Tesis para optar el Titulo de Segunda Especialidad Profesional](nombre_tramite)?
@@ -345,8 +347,7 @@ nlu:
     - [constancia de buena conducta](nombre_tramite)
     - [reserva de matricula](nombre_tramite)?
     - [admision de titulados](nombre_tramite)?
-
-
+    - [rotulado de diploma de titulo de segunda especialidad profesional](nombre_tramite)
 - intent: consultar_monto
   examples: |
     - Cuanto es el costo del tramite [Traslado Externo](nombre_tramite)?
@@ -386,8 +387,7 @@ nlu:
     - cuanto se paga por tramitar [cursos dirigidos](nombre_tramite)?
     - cual es el costo de tramitar [traslado interno de una escuela a otra de otra facultad](nombre_tramite)?
     - cual es el monto que debo pagar por tramitar [traslado interno de una escuela a otra de la misma facultad](nombre_tramite)
-
-
+    - Cuanto es el costo del tramite [Traslado Externo](nombre_tramite)
 - intent: consultar_monto_solotramite
   examples: |
     - [Traslado Externo](nombre_tramite)?
@@ -427,7 +427,6 @@ nlu:
     - [cursos dirigidos](nombre_tramite)?
     - [traslado interno de una escuela a otra de otra facultad](nombre_tramite)?
     - [traslado interno de una escuela a otra de la misma facultad](nombre_tramite)?
-
 - intent: consultar_requisitos
   examples: |
     - Cuales son los requisitos para el tramite de [Silabos de Estudios en Maestrias o Doctorados](nombre_tramite)?
@@ -464,7 +463,6 @@ nlu:
     - que debo presentar para realizar la [subsanacion de asignaturas](nombre_tramite)
     - necesito los detalles del tramite de [rectificacion de nombre](nombre_tramite)
     - me puede detallar los requisitos para realizar la [convalidacion de asignaturas](nombre_tramite) por favor
-
 - intent: consultar_requisitos_solotramite
   examples: |
     - [Silabos de Estudios en Maestrias o Doctorados](nombre_tramite)?
@@ -501,7 +499,6 @@ nlu:
     - [subsanacion de asignaturas](nombre_tramite)
     - [rectificacion de nombre](nombre_tramite)
     - [convalidacion de asignaturas](nombre_tramite) por favor
-
 - intent: consultar_pago
   examples: |
     - donde pago?
@@ -520,7 +517,6 @@ nlu:
     - se puede pagar con tarjeta de debito?
     - se puede pagar con tarjeta de credito?
     - quiero pagar con tarjeta
-
 - intent: feed_back
   examples: |
     - me gusta como me ayudaste
@@ -528,7 +524,6 @@ nlu:
     - Me resulto muy util la informacion que me proporcionaste
     - Me gusta la forma en que respondes rapidamente a mis preguntas
     - Me gustaria tener la opcion de hablar con un agente humano en caso de que el chatbot no pueda ayudarme
-
 - intent: sugerencia
   examples: |
     - seria genial si pudieras enviar notificaciones
@@ -537,8 +532,6 @@ nlu:
     - Me gustaria que el chatbot tuviera la opcion de recordar mis preguntas anteriores para facilitar futuras consultas
     - Podrias agregar una opcion de chat en vivo con un agente humano si el chatbot no puede resolver mi problema
     - Seria genial si el chatbot pudiera proporcionar enlaces relevantes para obtener mas informacion sobre el tema
-
-
 - intent: ubicacion
   examples: |
     - busca la ubicacion de la UNSAAC
@@ -557,9 +550,7 @@ nlu:
     - dime donde esta la UNSAAC
     - donde queda la UNSAAC
     - como llego a la universidad?
-
-
-- intent: decir_tramite
+- intent: decir_tramite_descripcion
   examples: |
     - queria consultar acerca de un tramite
     - en que consiste el tramite
@@ -574,6 +565,8 @@ nlu:
     - me explicas que es un tramite
     - me dices como es el proceso de un tramite
     - en que consiste el nombre de un tramite
+- intent: decir_tramite_monto
+  examples: |
     - cuanto cuesta un tramite
     - cuanto es el costo de un tramite
     - cual es el costo de un tramite
@@ -590,6 +583,8 @@ nlu:
     - cual es el precio por tramite
     - cuanto cuesta tramitar un documento
     - cual es el monto que debo pagar por tramitar
+- intent: decir_tramite_requisitos
+  examples: |
     - me puedes indicar los requisitos de un tramite
     - cuales son los requisitos para un tramite
     - que requisitos necesito para un tramite
@@ -602,15 +597,12 @@ nlu:
     - que me piden para un tramite
     - que cosas piden para un tramite
     - que documentos se presentan para un tramite
-    - como hago para realizar un tramite
     - que debo presentar para solicitar un tramite virtual
     - necesito los detalles para realizar un tramite
     - me puede detallar los requisitos para realizar un tramite
-    
 - regex: anio
   examples: |
     - \b[0-9]{4}\b
-    
 - regex: codigo
   examples: |
     - \b[0-9]{6}\b
