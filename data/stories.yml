@@ -5,10 +5,30 @@ version: "3.1"
 ##oq : only question direct
 stories:
 
-- story: story_despedida
+
+- story: story_saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+
+- story: story_despedida1
   steps:
   - intent: despedidas
-  - action: utter_goodbye
+  - action: utter_ask_feedback
+  - intent: afirmar
+  - action: utter_bueno
+
+- story: story_despedida2
+  steps:
+  - intent: despedidas
+  - action: utter_ask_feedback
+  - intent: negar
+  - action: utter_malo
+
+- story: story_agradecer
+  steps:
+  - intent: agradecer
+  - action: utter_denada
 
 - story: story_plazo_atencion
   steps:
@@ -26,7 +46,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -40,7 +59,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_plazo_atencion_ss
@@ -50,7 +68,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_plazo_atencion_d
@@ -60,7 +77,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_plazo_atencion_oq
@@ -218,6 +234,28 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+
+
+- story: story_consultar_tramites_bueno_oq_1
+  steps:
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144997'
+  - slot_was_set:
+    - codigo: '144997'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2022'
+  - slot_was_set:
+    - anio: '2022'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2022'
+  - slot_was_set:
+    - codigo: '144997'
 
 
 - story: story_consultar_tramites_malo
@@ -414,7 +452,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_pregunta_solicitud_online_ss
@@ -431,7 +468,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_pregunta_solicitud_online_sn
@@ -444,7 +480,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_pregunta_solicitud_online_d
@@ -454,7 +489,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -480,7 +514,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_horario_de_atencion_ss
@@ -497,7 +530,7 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 - story: story_horario_de_atencion_sn
@@ -510,7 +543,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_horario_de_atencion_d
@@ -520,7 +552,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_horario_de_atencion_oq
@@ -545,7 +576,6 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_descripcion_ss
@@ -562,7 +592,6 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_descripcion_sn
@@ -579,7 +608,6 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_descripcion_d
@@ -593,7 +621,6 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_descripcion_oq
@@ -667,7 +694,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -678,7 +705,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -692,7 +718,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -703,7 +729,7 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 - story: story_consultar_descripcion_solotramite_sn
@@ -711,7 +737,7 @@ stories:
   - intent: saludo
   - action: utter_saludo
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -722,12 +748,12 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 - story: story_consultar_descripcion_solotramite_d
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -738,12 +764,12 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 - story: story_consultar_descripcion_solotramite_oq
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -755,7 +781,7 @@ stories:
 
 - story: story_consultar_descripcion_solotramite_oq1
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -767,7 +793,7 @@ stories:
 
 - story: story_consultar_descripcion_solotramite_oq2
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -779,7 +805,7 @@ stories:
 
 - story: story_consultar_descripcion_solotramite_oq3
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -791,7 +817,7 @@ stories:
 
 - story: story_consultar_descripcion_solotramite_oq4
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -803,7 +829,7 @@ stories:
 
 - story: story_consultar_descripcion_solotramite_oq5
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -830,7 +856,6 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -848,7 +873,6 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -867,7 +891,6 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -882,7 +905,7 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 
@@ -958,7 +981,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -969,7 +992,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -983,7 +1005,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -994,7 +1016,7 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 
@@ -1003,7 +1025,7 @@ stories:
   - intent: saludo
   - action: utter_saludo
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1014,12 +1036,12 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 - story: story_consultar_requisitos_solotramite_d
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1030,12 +1052,12 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
+  
   - action: action_restart
 
 - story: story_consultar_requisitos_solotramite_oq
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1048,7 +1070,7 @@ stories:
 
 - story: story_consultar_requisitos_solotramite_oq1
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1060,7 +1082,7 @@ stories:
 
 - story: story_consultar_requisitos_solotramite_oq2
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1072,7 +1094,7 @@ stories:
 
 - story: story_consultar_requisitos_solotramite_oq3
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1083,7 +1105,7 @@ stories:
 
 - story: story_consultar_requisitos_solotramite_oq4
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1095,7 +1117,7 @@ stories:
 
 - story: story_consultar_requisitos_solotramite_oq5
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1125,7 +1147,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_monto_ss
@@ -1146,7 +1167,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_monto_sn
@@ -1163,7 +1183,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_monto_d
@@ -1177,7 +1196,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -1185,9 +1203,9 @@ stories:
   steps:
   - intent: consultar_monto
     entities:
-    - nombre_tramite: traslado externo
+    - nombre_tramite: Matricula de Alumnos Regulares
   - slot_was_set:
-    - nombre_tramite: traslado externo
+    - nombre_tramite: Matricula de Alumnos Regulares
   - action: action_consultar_monto_tramite
 
 
@@ -1256,13 +1274,13 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
-    - nombre_tramite: Traslado Externo
+    - nombre_tramite: sustentacion de tesis
   - slot_was_set:
-    - nombre_tramite: Traslado Externo
+    - nombre_tramite: sustentacion de tesis
   - action: action_consultar_monto_tramite
   - action: utter_did_that_help
   - intent: afirmar
@@ -1279,7 +1297,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1297,7 +1315,7 @@ stories:
   - intent: saludo
   - action: utter_saludo
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1312,7 +1330,7 @@ stories:
 
 - story: story_consultar_monto_solotramite_d
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1328,19 +1346,19 @@ stories:
 
 - story: story_consultar_monto_solotramite_oq
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
-    - nombre_tramite: Traslado Externo
+    - nombre_tramite: Grado de Bachiller
   - slot_was_set:
-    - nombre_tramite: Traslado Externo
+    - nombre_tramite: Grado de Bachiller
   - action: action_consultar_monto_tramite
 
 
 - story: story_consultar_monto_solotramite_oq1
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1352,7 +1370,7 @@ stories:
 
 - story: story_consultar_monto_solotramite_oq2
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1364,7 +1382,7 @@ stories:
 
 - story: story_consultar_monto_solotramite_oq3
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1376,7 +1394,7 @@ stories:
 
 - story: story_consultar_monto_solotramite_oq4
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1388,7 +1406,7 @@ stories:
 
 - story: story_consultar_monto_solotramite_oq5
   steps:
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1413,7 +1431,6 @@ stories:
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_pago_ss
@@ -1430,7 +1447,6 @@ stories:
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_pago_sn
@@ -1443,7 +1459,6 @@ stories:
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_pago_d
@@ -1453,7 +1468,6 @@ stories:
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 - story: story_consultar_pago_oq
@@ -1587,7 +1601,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -1596,7 +1610,7 @@ stories:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
   - action: utter_did_that_help
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1607,7 +1621,6 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
 
 
@@ -1624,7 +1637,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - intent: consultar_descripcion_solotramite
     entities:
@@ -1633,7 +1646,7 @@ stories:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
   - action: utter_did_that_help
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1660,7 +1673,7 @@ stories:
   - slot_was_set:
     - name: cristian
   - action: utter_question_b
-  - intent: decir_tramite
+  - intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - intent: consultar_requisitos_solotramite
     entities:
@@ -1669,7 +1682,7 @@ stories:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - action: action_consultar_requisitos_tramite
   - action: utter_did_that_help
-  - intent: decir_tramite
+  - intent: decir_tramite_monto
   - action: utter_que_tramite
   - intent: consultar_monto_solotramite
     entities:
@@ -1723,6 +1736,18 @@ stories:
   - action: utter_ubicacion
   - action: action_restart
 
+- story: story_consultar_ubicacion1
+  steps:
+  - intent: ubicacion
+  - action: utter_ubicacion
+
+- story: story_consultar_ubicacion2
+  steps:
+  - intent: ubicacion
+  - action: utter_ubicacion
+  
+
+
 - story: story_fueradelugar
   steps:
   - action: utter_no_te_entiendo
@@ -1731,7 +1756,48 @@ stories:
 - story: story_otraduda
   steps:
   - action: utter_denada
-  - action: utter_otraduda
   - action: action_restart
+
+
+#rasa interactive
+- story: interactive_story_1
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: decir_tramite_descripcion
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: rotulado de diploma de titulo de segunda especialidad profesional
+  - slot_was_set:
+    - nombre_tramite: rotulado de diploma de titulo de segunda especialidad profesional
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+
+- story: interactive_story_2
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: ubicacion
+  - action: utter_ubicacion
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: action_restart
+
+- story: interactive_story_3
+  steps:
+  - action: utter_question_b
+  - intent: ubicacion
+  - action: utter_ubicacion
+
+
+
+
+
 
 
