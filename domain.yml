@@ -1,8 +1,8 @@
 version: '3.1'
 intents:
 - afirmar
+- agradecer
 - bot_duda
-- despedidas
 - consultar_descripcion
 - consultar_descripcion_solotramite
 - consultar_monto
@@ -11,8 +11,11 @@ intents:
 - consultar_requisitos
 - consultar_requisitos_solotramite
 - consultar_tramites
-- decir_tramite
+- decir_tramite_descripcion
+- decir_tramite_monto
+- decir_tramite_requisitos
 - del_anio
+- despedidas
 - feed_back
 - horario_atencion_tramite
 - mi_codigo
@@ -24,51 +27,41 @@ intents:
 - saludo
 - sugerencia
 - ubicacion
-
-
 actions:
 - action_consultar_descripcion_tramite
 - action_consultar_monto_tramite
 - action_consultar_requisitos_tramite
 - action_consultar_tramites
-# - action_custom_fallback
+- action_restart
 - action_save_conversation
 - action_say_name
-- action_restart
 - my_fallback_action
-- utter_saludo
-- utter_goodbye
-- utter_no_te_entiendo
-- utter_bueno
-- utter_malo
-- utter_did_that_help
-- utter_iamabot
-- utter_denada
-- utter_horario_atencion_tramite
-- utter_question_a
-- utter_question_b
-- utter_ubicacion
 - utter_anio
+- utter_ask_feedback
+- utter_bueno
 - utter_codigo
+- utter_denada
+- utter_did_that_help
 - utter_donde_pago
-- utter_tramite_online
+- utter_goodbye
+- utter_horario_atencion_tramite
+- utter_iamabot
+- utter_malo
+- utter_no_te_entiendo
 - utter_plazo_atencion
 - utter_que_tramite
-- utter_otraduda
-
+- utter_question_a
+- utter_question_b
+- utter_saludo
+- utter_tramite_online
+- utter_ubicacion
 responses:
   utter_saludo:
-  - text: |-
-      ¡Hola!👋, mi nombre es HatunBot🤖.
-  - text: |-
-      ¡Hola, qué tal estás?👋, soy HatunBot🤖.
-  - text: |-
-      Hola, ¿qué tal?!👋, me llamo HatunBot🤖.
-  - text: |-
-      ¡Hola, estoy para ayudarte en tus consultas!👋, soy HatunBot🤖.
-  - text: |-
-      ¡Hola amig@!👋, mi nombre es HatunBot🤖.
- 
+  - text: ¡Hola!👋, mi nombre es HatunBot🤖.
+  - text: ¡Hola, qué tal estás?👋, soy HatunBot🤖.
+  - text: Hola, ¿qué tal?!👋, me llamo HatunBot🤖.
+  - text: ¡Hola, estoy para ayudarte en tus consultas!👋, soy HatunBot🤖.
+  - text: ¡Hola amig@!👋, mi nombre es HatunBot🤖.
   utter_goodbye:
   - text: |-
       Nos vemos pronto, cuidate {name}.
@@ -76,13 +69,9 @@ responses:
   - text: |-
       Hasta pronto {name}
       si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
-  - text: |-
-      Hasta pronto, si te sirvió mi ayuda, espero verte pronto!
-  - text: |-
-      Adios, vuelve pronto!
-  - text: |-
-      Chau, estoy para ayudarte en cualquier momento!
-
+  - text: Hasta pronto, si te sirvió mi ayuda, espero verte pronto!
+  - text: Adios, vuelve pronto!
+  - text: Chau, estoy para ayudarte en cualquier momento!
   utter_no_te_entiendo:
   - text: |-
       Ups!
@@ -94,41 +83,41 @@ responses:
   - text: |-
       Ups!
        No entendí tu consulta...
-  - text: |-
-      Lo siento!, intentalo otra vez, no entendí...
+  - text: Lo siento!, intentalo otra vez, no entendí...
   - text: |-
       Mmmm..
        No logro entender tu consulta...
-
+  utter_ask_feedback:
+  - text: ¿Cómo ha ido la conversación?
+    buttons:
+    - title: 👍
+      payload: /afirmar
+    - title: 👎
+      payload: /negar
   utter_bueno:
   - text: Muchas gracias {name}, eso me servirá para seguir mejorando.
   - text: Muchas gracias, eso me ayudará para continuar mejorando.
   - text: Gracias {name}, seguiré mejorando.
   - text: Gracias, continuaré mejorando.
   - text: Que bueno, continuaré mejorando.
-
   utter_malo:
   - text: Gracias, lo tendremos en cuenta para mejorar nuestro servicio.
   - text: Ups! lo lamento, intentaré mejorar para la próxima.
   - text: Lo siento!, intentaré mejorar para la próxima.
   - text: De acuerdo, seguiremos mejorando nuestro servicio.
   - text: Ups! la próxima vez lo haré mejor.
-
   utter_did_that_help:
   - text: Eso te ayudo?
   - text: Te sirvió la ayuda?
   - text: Logré resolver tu consulta?
   - text: eso te sirvió?
   - text: mi respuesta te ayudó?
-
-
   utter_iamabot:
   - text: Soy un bot artificial listo para servirte 💪
   - text: Si! Soy un asistente virtual y haré mi mejor esfuerzo por ayudarte 😃
   - text: Soy un bot impulsado con inteligencia artificial preparado para resolver tus consultas 💪
   - text: Si! Soy un asistente virtual 😃
   - text: Soy un bot 💪
-
   utter_denada:
   - text: Que bueno que te haya servido! 😃
   - text: Gracias por confiar en mi! 😊
@@ -136,106 +125,80 @@ responses:
   - text: De nada, si necesitas algo más aquí estoy 😊
   - text: De nada, no dudes en consultarme si tienes más dudas😃
   - text: No hay de que😀
-
+  - text: ¿Tienes otra duda en la que te pueda ayudar?
+  - text: ¿Puedo ayudarte en otra consulta?
+  - text: ¿Tienes otra duda?
+  - text: ¿Te puedo ayudar en algo mas?
+  - text: Si tienes otra consulta, escribela.
   utter_horario_atencion_tramite:
-  - text: |-
-      El horario de atención es de lunes a viernes de 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
+  - text: El horario de atención es de lunes a viernes de 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
   - text: |-
       Puedes realizar tus trámites entre las
       8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⏰
-  - text: |-
-      de lunes a viernes de  8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
+  - text: de lunes a viernes de  8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
   - text: |-
       Visitanos en este horario de lunes a viernes de 
       8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⏰
-  - text: |-
-      El horario de atención es de 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
-
-
+  - text: El horario de atención es de 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
   utter_question_a:
   - text: ¿Cúal es tu nombre?
   - text: ¿Como te llamas?
   - text: ¿Me podrias decir tu nombre?
   - text: Indicame tu nombre por favor
   - text: Brindame tu nombre por favor
-
   utter_question_b:
   - text: ¿en que te puedo ayudar?
   - text: ¿en que puedo ayudarte?
   - text: ¿Qué deseas hacer {name} ?
   - text: ¿Qué te gustaria hacer {name}?
   - text: ¿Qué quisieras hacer {name}?
-
   utter_ubicacion:
   - text: La UNSAAC se encuentra en la Av. de La Cultura 773.
   - text: Nos ubicamos en la Av. de La Cultura 773.
   - text: Se encuentra en la Av. de La Cultura 773.
   - text: Se ubica en la Av. de La Cultura 773.
   - text: Av. de La Cultura 773.
-
   utter_anio:
   - text: Podrías indicarme el año?
   - text: De que año ?
   - text: De que año lo requieres?
   - text: Indicame el año por favor
   - text: año?
-  
-
   utter_codigo:
   - text: Podrías indicarme tu codigo?
   - text: Cual es tu codigo universitario?
   - text: Indicame tu codigo por favor
   - text: tu codigo universitario?
   - text: codigo?
-
-
-  # utter_tramite_no_encontrado:
-  # - text: No pude encontrar ningun trámite con ese nombre 🙁
-  # - text: Lo siento, no encontré el trámite que buscas ☹
-
   utter_donde_pago:
   - text: Puedes pagar aqui http://servicios.unsaac.edu.pe/recaudacion/ 💻
   - text: Realiza el pago segun el trámite aqui http://servicios.unsaac.edu.pe/recaudacion/ 💻
   - text: Paga según el trámite en la siguiente direccion http://servicios.unsaac.edu.pe/recaudacion/ 💻
   - text: Verifica tu trámite y realiza el pago en http://servicios.unsaac.edu.pe/recaudacion/ 💻
   - text: http://servicios.unsaac.edu.pe/recaudacion/ 💻
-
   utter_tramite_online:
   - text: Claro que sí, lo puedes hacer directamente en esta página, solo llena el formulario. 💻
   - text: Lo puedes hacer directamente en esta página, solo llena el formulario. 💻
   - text: Lo puedes realizar en esta página, solo llena el formulario. 💻
   - text: Solo llena el formulario de esta pagina. 💻
   - text: Sigue los pasos y solo llena el formulario.
-
   utter_plazo_atencion:
   - text: Lamento mucho este inconveniente, quizá tengas alguna observación por levantar, revisalo aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻
   - text: Lo siento por este inconveniente, quizá tengas alguna observación por levantar, revisalo aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻
   - text: Disculpa por el inconveniente, quizá tengas alguna observación por levantar, revisalo aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻
   - text: Quizá tengas alguna observación por levantar, revisalo aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻
   - text: Revisa tu trámite aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻 , quizá tienes alguna observación
-
   utter_que_tramite:
   - text: Entiendo, ¿indicame el nombre del trámite?
   - text: ¿indicame el nombre del trámite?
   - text: Entiendo, ¿proporcioname el nombre del trámite?
   - text: Entiendo, ¿puedes darme el nombre del trámite?
   - text: Entiendo, de que tramite?
-
-  utter_otraduda:
-  - text: ¿Tienes otra duda en la que te pueda ayudar?
-  - text: ¿Puedo ayudarte en otra consulta?
-  - text: ¿Tienes otra duda?
-  - text: ¿Te puedo ayudar en algo mas?
-  - text: Si tienes otra consulta, escribela.
-
-
 entities:
-- name
 - nombre_tramite
+- name
 - anio
 - codigo
-
-
 slots:
   nombre_tramite:
     type: text
