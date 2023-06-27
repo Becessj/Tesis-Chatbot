@@ -1,5 +1,8 @@
 version: "3.1"
-
+##ss : sin saludo
+##sn; sin name
+##d : pregunta directa
+##oq : only question direct
 stories:
 
 - story: story_despedida
@@ -23,6 +26,48 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_plazo_atencion_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_plazo_atencion_ss
+  steps:
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_plazo_atencion_d
+  steps:
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_plazo_atencion_oq
+  steps:
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+
 
 - story: story_bot_duda
   steps:
@@ -48,20 +93,132 @@ stories:
     - codigo: '144996'
   - slot_was_set:
     - codigo: '144996'
-  - action: utter_año
-  - intent: del_año
+  - action: utter_anio
+  - intent: del_anio
     entities:
-    - año: '2023'
+    - anio: '2023'
   - slot_was_set:
-    - año: '2023'
+    - anio: '2023'
   - action: action_consultar_tramites
   - slot_was_set:
-    - año: '2023'
+    - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_bueno
+  - action: action_restart
+
+
+- story: story_consultar_tramites_bueno_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_bueno
+  - action: action_restart
+
+
+- story: story_consultar_tramites_bueno_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_bueno
+  - action: action_restart
+
+
+- story: story_consultar_tramites_bueno_d
+  steps:
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_bueno
+  - action: action_restart
+
+
+- story: story_consultar_tramites_bueno_oq
+  steps:
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+
 
 - story: story_consultar_tramites_malo
   steps:
@@ -81,20 +238,129 @@ stories:
     - codigo: '144996'
   - slot_was_set:
     - codigo: '144996'
-  - action: utter_año
-  - intent: del_año
+  - action: utter_anio
+  - intent: del_anio
     entities:
-    - año: '2023'
+    - anio: '2023'
   - slot_was_set:
-    - año: '2023'
+    - anio: '2023'
   - action: action_consultar_tramites
   - slot_was_set:
-    - año: '2023'
+    - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
   - action: utter_did_that_help
   - intent: negar
   - action: utter_malo
+  - action: action_restart
+
+
+- story: story_consultar_tramites_malo_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: negar
+  - action: utter_malo
+  - action: action_restart
+
+- story: story_consultar_tramites_malo_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: negar
+  - action: utter_malo
+  - action: action_restart
+
+- story: story_consultar_tramites_malo_d
+  steps:
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_did_that_help
+  - intent: negar
+  - action: utter_malo
+  - action: action_restart
+
+- story: story_consultar_tramites_malo_oq
+  steps:
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
+
 
 - story: story_mi_nombre
   steps:
@@ -109,6 +375,28 @@ stories:
   - action: utter_question_b
   - intent: negar
   - action: utter_goodbye
+  - action: action_restart
+
+- story: story_mi_nombre_ss
+  steps:
+  - intent: mi_nombre
+    entities:
+    - name: juan
+  - slot_was_set:
+    - name: juan
+  - action: utter_question_b
+  - intent: negar
+  - action: utter_goodbye
+  - action: action_restart
+
+- story: story_mi_nombre_oq
+  steps:
+  - intent: mi_nombre
+    entities:
+    - name: juan
+  - slot_was_set:
+    - name: juan
+
 
 - story: story_pregunta_solicitud_online
   steps:
@@ -126,6 +414,55 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_pregunta_solicitud_online_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: juan
+  - slot_was_set:
+    - name: juan
+  - action: utter_question_b
+  - intent: pregunta_solicitud_online
+  - action: utter_tramite_online
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_pregunta_solicitud_online_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: pregunta_solicitud_online
+  - action: utter_tramite_online
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_pregunta_solicitud_online_d
+  steps:
+  - intent: pregunta_solicitud_online
+  - action: utter_tramite_online
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_pregunta_solicitud_online_oq
+  steps:
+  - intent: pregunta_solicitud_online
+  - action: utter_tramite_online
+
 
 - story: story_horario_de_atencion
   steps:
@@ -143,18 +480,54 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
 
-- story: story_consultar_descripcion_sn
+- story: story_horario_de_atencion_ss
   steps:
-  - intent: consultar_descripcion
+  - action: utter_question_a
+  - intent: mi_nombre
     entities:
-    - nombre_tramite: constancia de no ser deudor a la universidad
+    - name: juan
   - slot_was_set:
-    - nombre_tramite: constancia de no ser deudor a la universidad
-  - action: action_consultar_descripcion_tramite
-  - action: utter_did_that_help 
+    - name: juan
+  - action: utter_question_b
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+  - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_horario_de_atencion_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_horario_de_atencion_d
+  steps:
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_horario_de_atencion_oq
+  steps:
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+
 
 - story: story_consultar_descripcion
   steps:
@@ -172,6 +545,115 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_descripcion_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+  - action: utter_question_b
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_descripcion_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_descripcion_d
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_descripcion_oq
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+
+- story: story_consultar_descripcion_oq1
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: modalidad de suficiencia
+  - slot_was_set:
+    - nombre_tramite: modalidad de suficiencia
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_oq2
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: primera oportunidad
+  - slot_was_set:
+    - nombre_tramite: primera oportunidad
+  - action: action_consultar_descripcion_tramite
+
+- story: story_consultar_descripcion_oq3
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: rectificacion de nombre en base de datos del centro de computo
+  - slot_was_set:
+    - nombre_tramite: rectificacion de nombre en base de datos del centro de computo
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_oq4
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: Pase para Escolares
+  - slot_was_set:
+    - nombre_tramite: Pase para Escolares
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_oq5
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: Atencion a Visitantes
+  - slot_was_set:
+    - nombre_tramite: Atencion a Visitantes
+  - action: action_consultar_descripcion_tramite
+
+
 
 - story: story_consultar_descripcion_solotramite
   steps:
@@ -196,8 +678,54 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_consultar_descripcion_solotramite_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
 
 - story: story_consultar_descripcion_solotramite_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_descripcion_solotramite_d
   steps:
   - intent: decir_tramite
   - action: utter_que_tramite
@@ -210,6 +738,81 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_descripcion_solotramite_oq
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_solotramite_oq1
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: admision primeros puestos de secundaria
+  - slot_was_set:
+    - nombre_tramite: admision primeros puestos de secundaria
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_solotramite_oq2
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: nombramiento de dictaminadores de tesis para maestria, doctorado
+  - slot_was_set:
+    - nombre_tramite: nombramiento de dictaminadores de tesis para maestria, doctorado
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_solotramite_oq3
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: traslado externo
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_solotramite_oq4
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: admision de titulados
+  - slot_was_set:
+    - nombre_tramite: admision de titulados
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_descripcion_solotramite_oq5
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: carta de Presentacion de Decano
+  - slot_was_set:
+    - nombre_tramite: carta de Presentacion de Decano
+  - action: action_consultar_descripcion_tramite
+
+
 
 - story: story_consultar_requisitos
   steps:
@@ -227,6 +830,121 @@ stories:
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_consultar_requisitos_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+  - action: utter_question_b
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: duplicado de constancia de matricula
+  - slot_was_set:
+    - nombre_tramite: duplicado de constancia de matricula
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+
+- story: story_consultar_requisitos_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: duplicado de constancia de matricula
+  - slot_was_set:
+    - nombre_tramite: duplicado de constancia de matricula
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_consultar_requisitos_d
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: duplicado de constancia de matricula
+  - slot_was_set:
+    - nombre_tramite: duplicado de constancia de matricula
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help 
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_consultar_requisitos_oq
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: duplicado de constancia de matricula
+  - slot_was_set:
+    - nombre_tramite: duplicado de constancia de matricula
+  - action: action_consultar_requisitos_tramite
+
+
+
+- story: story_consultar_requisitos_oq1
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Silabos de Estudios en Maestrias o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Silabos de Estudios en Maestrias o Doctorados
+  - action: action_consultar_requisitos_tramite
+
+
+
+- story: story_consultar_requisitos_oq2
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Acta Adicional de Estudios de Maestria o Doctorado
+  - slot_was_set:
+    - nombre_tramite: Acta Adicional de Estudios de Maestria o Doctorado
+  - action: action_consultar_requisitos_tramite
+
+- story: story_consultar_requisitos_oq3
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Constancia de Estudios de Maestria o Doctorado
+  - slot_was_set:
+    - nombre_tramite: Constancia de Estudios de Maestria o Doctorado
+  - action: action_consultar_requisitos_tramite
+
+- story: story_consultar_requisitos_oq4
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Matricula y Derechos de Enseñanza en Doctorados
+  - slot_was_set:
+    - nombre_tramite: Matricula y Derechos de Enseñanza en Doctorados
+  - action: action_consultar_requisitos_tramite
+
+
+- story: story_consultar_requisitos_oq5
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: rotulado de diploma de titulo profesional
+  - slot_was_set:
+    - nombre_tramite: rotulado de diploma de titulo profesional
+  - action: action_consultar_requisitos_tramite
+
 
 - story: story_consultar_requisitos_solotramite
   steps:
@@ -251,6 +969,140 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_consultar_requisitos_solotramite_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_consultar_requisitos_solotramite_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_requisitos_solotramite_d
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_requisitos_solotramite_oq
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+
+
+
+- story: story_consultar_requisitos_solotramite_oq1
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Certificacion de Diploma Original
+  - slot_was_set:
+    - nombre_tramite: Certificacion de Diploma Original
+  - action: action_consultar_requisitos_tramite
+
+
+- story: story_consultar_requisitos_solotramite_oq2
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: cesantia
+  - slot_was_set:
+    - nombre_tramite: cesantia
+  - action: action_consultar_requisitos_tramite
+
+
+- story: story_consultar_requisitos_solotramite_oq3
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: modificacion del plan de tesis
+  - slot_was_set:
+    - nombre_tramite: modificacion del plan de tesis
+  - action: action_consultar_requisitos_tramite
+
+- story: story_consultar_requisitos_solotramite_oq4
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: subsanacion de asignaturas
+  - slot_was_set:
+    - nombre_tramite: subsanacion de asignaturas
+  - action: action_consultar_requisitos_tramite
+
+
+- story: story_consultar_requisitos_solotramite_oq5
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: rectificacion de nombre
+  - slot_was_set:
+    - nombre_tramite: rectificacion de nombre
+  - action: action_consultar_requisitos_tramite
 
 
 - story: story_consultar_monto
@@ -273,6 +1125,123 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_monto_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: juan
+  - slot_was_set:
+    - name: juan
+  - action: utter_question_b
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: traslado externo
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_monto_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: traslado externo
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_monto_d
+  steps:
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: traslado externo
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+- story: story_consultar_monto_oq
+  steps:
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: traslado externo
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_monto_tramite
+
+
+
+- story: story_consultar_monto_oq1
+  steps:
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: matricula regular en segunda especialidad profesional
+  - slot_was_set:
+    - nombre_tramite: matricula regular en segunda especialidad profesional
+  - action: action_consultar_monto_tramite
+
+
+
+
+- story: story_consultar_monto_oq2
+  steps:
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: proceso de admision a Segunda Especialidad Profesional
+  - slot_was_set:
+    - nombre_tramite: proceso de admision a Segunda Especialidad Profesional
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_oq3
+  steps:
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: Ficha de Seguimiento de Maestria y Doctorado
+  - slot_was_set:
+    - nombre_tramite: Ficha de Seguimiento de Maestria y Doctorado
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_oq4
+  steps:
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: inscripcion del proyecto de tesis y nombramiento de asesor en maestria o doctorado
+  - slot_was_set:
+    - nombre_tramite: inscripcion del proyecto de tesis y nombramiento de asesor en maestria o doctorado
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_oq5
+  steps:
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: Cursos Dirigidos en Maestria o Doctorado
+  - slot_was_set:
+    - nombre_tramite: Cursos Dirigidos en Maestria o Doctorado
+  - action: action_consultar_monto_tramite
 
 
 - story: story_consultar_monto_solotramite
@@ -298,7 +1267,135 @@ stories:
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
+  - action: action_restart
 
+- story: story_consultar_monto_solotramite_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: action_restart
+
+- story: story_consultar_monto_solotramite_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: action_restart
+
+- story: story_consultar_monto_solotramite_d
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: action_restart
+
+
+- story: story_consultar_monto_solotramite_oq
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_solotramite_oq1
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Reinicio de Estudios en Maestria o Doctorado
+  - slot_was_set:
+    - nombre_tramite: Reinicio de Estudios en Maestria o Doctorado
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_solotramite_oq2
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: nombramiento de asesor e inscripcion de tema de tesis o trabajo de investigacion
+  - slot_was_set:
+    - nombre_tramite: nombramiento de asesor e inscripcion de tema de tesis o trabajo de investigacion
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_solotramite_oq3
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Constancia de Creditos Acumulados o de Egresado
+  - slot_was_set:
+    - nombre_tramite: Constancia de Creditos Acumulados o de Egresado
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_solotramite_oq4
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Admision para victimas de Terrorismo
+  - slot_was_set:
+    - nombre_tramite: Admision para victimas de Terrorismo
+  - action: action_consultar_monto_tramite
+
+
+- story: story_consultar_monto_solotramite_oq5
+  steps:
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: subsidio por fallecimiento
+  - slot_was_set:
+    - nombre_tramite: subsidio por fallecimiento
+  - action: action_consultar_monto_tramite
 
 - story: story_consultar_pago
   steps:
@@ -316,26 +1413,325 @@ stories:
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_pago_ss
+  steps:
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: Gabriel
+  - slot_was_set:
+    - name: Gabriel
+  - action: utter_question_b
+  - intent: consultar_pago
+  - action: utter_donde_pago
+  - action: utter_did_that_help
+  - intent: despedidas
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_pago_sn
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_b
+  - intent: consultar_pago
+  - action: utter_donde_pago
+  - action: utter_did_that_help
+  - intent: despedidas
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_pago_d
+  steps:
+  - intent: consultar_pago
+  - action: utter_donde_pago
+  - action: utter_did_that_help
+  - intent: despedidas
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+- story: story_consultar_pago_oq
+  steps:
+  - intent: consultar_pago
+  - action: utter_donde_pago
+
+#combinaciones
+
+- story: mix_1
+  steps:
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - intent: bot_duda
+  - action: utter_iamabot
+
+
+- story: mix_2
+  steps:
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+
+
+
+- story: mix_3
+  steps:
+  - intent: pregunta_solicitud_online
+  - action: utter_tramite_online
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+
+
+- story: mix_4
+  steps:
+  - intent: consultar_pago
+  - action: utter_donde_pago
+  - intent: plazo_atencion
+  - action: utter_plazo_atencion
+  - intent: horario_atencion_tramite
+  - action: utter_horario_atencion_tramite
+
+- story: mix_5
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+
+- story: mix_6
+  steps:
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Reinicio de Estudios
+  - slot_was_set:
+    - nombre_tramite: Reinicio de Estudios
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help 
+
+- story: mix_7
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Reinicio de Estudios
+  - slot_was_set:
+    - nombre_tramite: Reinicio de Estudios
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: Recurso de Apelacion
+  - slot_was_set:
+    - nombre_tramite: Recurso de Apelacion
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+
+- story: mix_8
+  steps:
+  - intent: consultar_requisitos
+    entities:
+    - nombre_tramite: Reinicio de Estudios
+  - slot_was_set:
+    - nombre_tramite: Reinicio de Estudios
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: Recurso de Apelacion
+  - slot_was_set:
+    - nombre_tramite: Recurso de Apelacion
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+
+
+- story: mix_9
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
+
+
+
+- story: mix_10
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: action_restart
+
+
+
+- story: mix_11
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+    entities:
+    - name: cristian
+    - name: juan
+  - slot_was_set:
+    - name: cristian
+  - action: utter_question_b
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - slot_was_set:
+    - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - intent: decir_tramite
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_denada
+  - action: action_restart
+
+- story: mix_12
+  steps:
+  - intent: saludo
+  - action: utter_saludo
+  - action: utter_question_a
+  - intent: mi_nombre
+  - action: utter_question_b
+  - intent: consultar_descripcion
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - intent: consultar_monto
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+
 
 - story: story_feedback
   steps:
   - intent: feed_back
   - action: utter_bueno
+  - action: action_restart
 
 - story: story_sugerir
   steps:
   - intent: sugerencia
   - action: utter_bueno
+  - action: action_restart
 
 - story: story_consultar_ubicacion
   steps:
   - intent: ubicacion
   - action: utter_ubicacion
+  - action: action_restart
 
 - story: story_fueradelugar
   steps:
   - action: utter_no_te_entiendo
+  - action: action_restart
 
-
+- story: story_otraduda
+  steps:
+  - action: utter_denada
+  - action: utter_otraduda
+  - action: action_restart
 
 
