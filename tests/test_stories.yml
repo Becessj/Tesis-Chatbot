@@ -162,6 +162,66 @@ stories:
     intent: afirmar
   - action: utter_denada 
 
+- story: test 8_1
+  steps:
+  - user: |
+     que es el tramite de traslado externo en maestria
+    intent: consultar_descripcion
+  - slot_was_set:
+    - nombre_tramite: traslado externo en maestria
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 8_11
+  steps:
+  - user: |
+     que es el examen de primera oportunidad
+    intent: consultar_descripcion
+  - slot_was_set:
+    - nombre_tramite: primera oportunidad
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 8_12
+  steps:
+  - user: |
+     para que sirve la rectificacion de nombre en base de datos del centro de computo
+    intent: consultar_descripcion
+  - slot_was_set:
+    - nombre_tramite: rectificacion de nombre en base de datos del centro de computo
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+  
+- story: test 8_2
+  steps:
+  - user: |
+      de que trata el tramite
+    intent: decir_tramite
+  - action: utter_que_tramite
+  - user: |
+     modalidad de suficiencia
+    intent: consultar_descripcion
+  - slot_was_set:
+    - nombre_tramite: modalidad de suficiencia
+  - action: action_consultar_descripcion_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
 
 - story: test 9
   steps:
@@ -178,6 +238,67 @@ stories:
     intent: consultar_requisitos
   - slot_was_set:
     - nombre_tramite: duplicado de constancia de matricula
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 9_1
+  steps:
+  - user: |
+      que requisitos son para el proceso de admision a maestrias
+    intent: consultar_requisitos
+  - slot_was_set:
+    - nombre_tramite: proceso de admision a maestrias
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 9_11
+  steps:
+  - user: |
+      cuales son los requisitos para el tramite de Acta Adicional de Estudios de Maestria o Doctorado
+    intent: consultar_requisitos
+  - slot_was_set:
+    - nombre_tramite: Acta Adicional de Estudios de Maestria o Doctorado
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 9_12
+  steps:
+  - user: |
+      que necesito llevar para sacar mi Carne de Biblioteca para Egresados
+    intent: consultar_requisitos
+  - slot_was_set:
+    - nombre_tramite: Carne de Biblioteca para Egresados
+  - action: action_consultar_requisitos_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+#falta test stories de que tramite aumentar con 3 tramites mas
+- story: test 9_2
+  steps:
+  - user: |
+      que documentos necesito para un tramite
+    intent: decir_tramite
+  - action: utter_que_tramite
+  - user: |
+      proceso de admision a maestrias
+    intent: consultar_requisitos
+  - slot_was_set:
+    - nombre_tramite: proceso de admision a maestrias
   - action: action_consultar_requisitos_tramite
   - action: utter_did_that_help
   - user: |
@@ -207,6 +328,65 @@ stories:
     intent: afirmar
   - action: utter_denada 
 
+- story: test 10_1
+  steps:
+  - user: |
+      Cuanto es el costo del tramite traslado externo
+    intent: consultar_monto
+  - slot_was_set:
+    - nombre_tramite: traslado externo
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 10_11
+  steps:
+  - user: |
+      cuanto esta la Ficha de Seguimiento Academico
+    intent: consultar_monto
+  - slot_was_set:
+    - nombre_tramite: Ficha de Seguimiento Academico
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 10_12
+  steps:
+  - user: |
+      cuanto esta el Duplicado de Acta de Evaluacion
+    intent: consultar_monto
+  - slot_was_set:
+    - nombre_tramite: Duplicado de Acta de Evaluacion
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+- story: test 10_2
+  steps:
+  - user: |
+      cuanto esta un tramite
+    intent: decir_tramite
+  - action: utter_que_tramite
+  - user: |
+      Ficha de Seguimiento Academico
+    intent: consultar_monto
+  - slot_was_set:
+    - nombre_tramite: Ficha de Seguimiento Academico
+  - action: action_consultar_monto_tramite
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
 
 - story: test 11
   steps:
