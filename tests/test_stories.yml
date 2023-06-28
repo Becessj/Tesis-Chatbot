@@ -209,7 +209,7 @@ stories:
   steps:
   - user: |
       de que trata el tramite
-    intent: decir_tramite
+    intent: decir_tramite_descripcion
   - action: utter_que_tramite
   - user: |
      modalidad de suficiencia
@@ -292,7 +292,7 @@ stories:
   steps:
   - user: |
       que documentos necesito para un tramite
-    intent: decir_tramite
+    intent: decir_tramite_requisitos
   - action: utter_que_tramite
   - user: |
       proceso de admision a maestrias
@@ -374,7 +374,7 @@ stories:
   steps:
   - user: |
       cuanto esta un tramite
-    intent: decir_tramite
+    intent: decir_tramite_monto
   - action: utter_que_tramite
   - user: |
       Ficha de Seguimiento Academico
