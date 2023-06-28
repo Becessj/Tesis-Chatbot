@@ -52,12 +52,12 @@ stories:
     intent: mi_codigo
   - slot_was_set:
     - codigo: 144996
-  - action: utter_año
+  - action: utter_anio
   - user: |
      del 2023
-    intent: del_año 
+    intent: del_anio 
   - slot_was_set:
-    - año: 2023
+    - anio: 2023
   - action: action_consultar_tramites
   - action: utter_did_that_help
   - user: |
