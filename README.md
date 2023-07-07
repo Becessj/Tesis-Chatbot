@@ -38,19 +38,19 @@ pip3 install -U pip && pip3 install rasa
 ## 🤖 Run
 #Entrenar el modelo. (También se ha adjuntado el modelo ya entrenado que se puede encontrar en la carpeta `/models`)
 ```bash
-Run `rasa train` to train a new model.
+Ejecutar `rasa train` para entrenar a un nuevo modelo.
 ```
 #Para comenzar a hablar con el bot desde la terminal mediante el comando
 ```bash
-Run `rasa shell` to chat with the agent using the terminal .
+Ejecutar `rasa shell` para chatear con el chatbot usando la terminal.
 ```
 #Iniciar el servidor del modelo
 ```bash
-Run `rasa run -m models --enable-api --cors "*" --debug` to start the conversational server .
+Ejecutar `rasa run -m models --enable-api --cors "*" --debug` para iniciar el servidor conversacional.
 ```
 #Iniciar el servidor de las acciones
 ```bash
-Run `rasa run actions --cors "*"` to start the actions server.
+Ejecutar `rasa run actions --cors "*"` para iniciar el servidor de acciones.
 ```
 ```bash
 rasa shell --endpoints endpoints.yml
