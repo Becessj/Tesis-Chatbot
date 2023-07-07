@@ -1,6 +1,6 @@
 # OPTIMIZACIÓN DE LA ASISTENCIA VIRTUAL EN EL TRÁMITE DOCUMENTARIO DE LA UNIVERSIDAD NACIONAL DE SAN ANTONIO ABAD DEL CUSCO MEDIANTE LA IMPLEMENTACIÓN DE UN CHATBOT BASADO EN INTELIGENCIA ARTIFICIAL
 Este chatbot está siendo desarrollado por Eber Chavez y Cristian Becerra como parte de la tesis de la UNSAAC Universidad Nacional de San Antonio Abad del Cusco. Python, RASA, React JS, API
-![ScreenShot](Chatbot-Unsaac-Widget/banner.png)
+![ScreenShot](Chatbot-Unsaac-Widget/banner1.png)
 
 
 ## PreGrado 2022-2023
