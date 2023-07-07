@@ -56,8 +56,9 @@ Run `rasa run actions --cors "*"` to start the actions server.
 rasa shell --endpoints endpoints.yml
 ```
 
-#Utilizando el widget integrado en el frontend.
-```bash
-Chatbot-Unsaac-Widget\dist
-```
+#Finalmente probamos utilizando el widget integrado en el frontend.
+[from here](https://github.com/Becessj/Tesis_Chatbot_Becerra_Chavez/tree/main/Chatbot-Unsaac-Widget/dist).
+
+
+
 
