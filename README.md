@@ -15,13 +15,13 @@ En este repositorio se puede consultar todo el código desarrollado en Rasa expu
 <a href="https://rasa.com/"><img width="150" height="100" src="https://www.spaceo.ca/wp-content/uploads/2019/12/rasa-framework.png"></a> 
 
 ## 📦 Install
-A la hora de instalar Rasa se instala una versión del paquete `rasa-sdk`, librería que proporciona las herramientas necesarias para escribir acciones personalizadas en python, que no es compatible con Rasa. Lo mismo ocurre con la librería `tensorflow-addons`. Esto se soluciona fácilmente desinstalando dichos paquetes e instalando la versiones deseadas.
+A la hora de instalar Rasa se instala una versión del paquete `rasa-sdk`, librería que proporciona las herramientas necesarias para escribir acciones personalizadas en python, que no es compatible con Rasa.
 Requires `Python 3.7` and `pip 21.3` or higher. Lower versions of `pip` take too much to resolve dependencies. 
-Tested with: `Python 3.7.11` and `pip 22.2.2`. Rasa version: `Rasa: 3.2.10` and `Rasa SDK: 3.2.2`. Newer versions of Rasa may not work.
+Tested with: `Python 3.7.11` and `pip 22.2.2`. Rasa version: `Rasa: 3.2.10` and `Rasa SDK: 3.2.2`.
 
 Clone repository
 ```shell
-git clone https://github.com/joancipria/vhihrtualapp.git && cd vihrtualapp
+git clone https://github.com/Becessj/Tesis_Chatbot_Becerra_Chavez.git && cd Tesis_Chatbot_Becerra_Chavez
 ```
 
 Create and activate a Python virtual environment
@@ -33,24 +33,31 @@ Upgrade `pip` and install `rasa`
 ```shell
 pip3 install -U pip && pip3 install rasa
 ```
-También se ha adjuntado el modelo ya entrenado que se puede encontrar en la carpeta `/models`. Para hacer uso del bot hay que correr las siguientes líneas de comando en diferentes terminales.
+
 
 ## 🤖 Run
-
-Run `rasa train` to train a new model.
-
-Run `rasa shell` to chat with the agent using the terminal .
-
-Run `rasa run -m models --enable-api --cors "*" --debug` to start the conversational server .
-
+#Entrenar el modelo. (También se ha adjuntado el modelo ya entrenado que se puede encontrar en la carpeta `/models`)
 ```bash
+Run `rasa train` to train a new model.
+```
+#Para comenzar a hablar con el bot desde la terminal mediante el comando
+```bash
+Run `rasa shell` to chat with the agent using the terminal .
+```
+#Iniciar el servidor del modelo
+```bash
+Run `rasa run -m models --enable-api --cors "*" --debug` to start the conversational server .
+```
 #Iniciar el servidor de las acciones
+```bash
 Run `rasa run actions --cors "*"` to start the actions server.
 ```
-Para comenzar a hablar con el bot se puede hacer o bien desde la terminal mediante el comando
-
 ```bash
 rasa shell --endpoints endpoints.yml
 ```
 
-o utilizando el widget integrado en el frontend.
+#Utilizando el widget integrado en el frontend.
+```bash
+Chatbot-Unsaac-Widget\dist
+```
+
