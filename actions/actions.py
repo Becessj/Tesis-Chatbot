@@ -16,8 +16,10 @@ class DefaultFallback(Action):
         return "my_fallback_action"
 
     def run(self, dispatcher, tracker, domain):
-        response = "Mmmm, no estoy seguro de lo que quieres decirme..." + "\n" + "Me puedes preguntar sobre  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de este trámite"
-        dispatcher.utter_message(text=response)
+        response = "Mmmm, no estoy seguro de lo que quieres decirme..." + "\n" + "Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de este trámite \n ● Descripción de un trámite \n ● Horarios \n"
+        response2 = "o puedes acudir a mi compañero responsable a través de https://meet.google.com/yis-dkje-bxq"
+        
+        dispatcher.utter_message(text=response+response2)
 
 # class ActionCustomFallback(Action):
 
