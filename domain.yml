@@ -12,8 +12,11 @@ intents:
 - consultar_requisitos_solotramite
 - consultar_tramites
 - decir_tramite_descripcion
+- decir_tramite_descripcion_st
 - decir_tramite_monto
+- decir_tramite_monto_st
 - decir_tramite_requisitos
+- decir_tramite_requisitos_st
 - del_anio
 - despedidas
 - feed_back
@@ -57,11 +60,11 @@ actions:
 - utter_ubicacion
 responses:
   utter_saludo:
-  - text: ¡Hola!👋, mi nombre es HatunBot🤖.
-  - text: ¡Hola, qué tal estás?👋, soy HatunBot🤖.
-  - text: Hola, ¿qué tal?!👋, me llamo HatunBot🤖.
-  - text: ¡Hola, estoy para ayudarte en tus consultas!👋, soy HatunBot🤖.
-  - text: ¡Hola amig@!👋, mi nombre es HatunBot🤖.
+  - text: ¡Hola!👋, mi nombre es HatunBot🤖, te ayudaré con tus dudas respecto al trámite documentario.
+  - text: ¡Hola!👋, soy HatunBot🤖, puedo resolver tus dudas respecto al trámite documentario.
+  - text: Hola👋, me llamo HatunBot🤖, estoy para ayudarte con las dudas respecto al trámite documentario.
+  - text: ¡Hola, estoy para ayudarte en tus consultas acerca del trámite documentario!👋, soy HatunBot🤖.
+  - text: ¡Hola amig@!👋, mi nombre es HatunBot🤖, puedes hacerme consultas respecto al trámite documentario.
   utter_goodbye:
   - text: |-
       Nos vemos pronto, cuidate {name}.
