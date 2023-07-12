@@ -15,9 +15,103 @@ nlu:
     - hola me ayudas?
     - por favor ayudame
     - por fa ayuda
+    - Necesito ayuda
+    - necesito aiuda
+    - Ayúdame por favor
+    - ayudame anda
+    - ¿Me ayudarías?
+    - me ayudarias en una pregunta
+    - Necesito que me ayudes
+    - necesito q me aiudes
+    - ¿Me podrías ayudar?
+    - hola!
+    - holaaaa
+    - holiiii
+    - holi
+    - holiii!
+    - Buenos días
+    - buen dia
+    - buenos diias
+    - Buenisimos dias
+    - Buenas
+    - buenaaas
+    - Saludos
+    - Buenas tardes
+    - Buenas noches
+    - Tanto gusto
+    - Un gusto verlo
+    - Un gusto verte
+    - Mucho gusto saludarlo
+    - Cuánto tiempo
+    - cuanto tiempo
+    - hola de nuevo
+    - Tanto tiempo sin verte
+    - Buen día
+    - Hey
+    - Hallo
+    - hello
+    - hellouu
+    - heeey
+    - oli
+    - hi
+    - ieeee
+    - eeeii
+    - eyyy
+    - ey
+    - eey
+    - ola
+    - ¿Me podrías echar una mano?
+    - echame una manita
+    - echame una mano por favor
+    - Ayudame
+    - ayudame, por favor necesito ayuda
+    - por fabor necesito aiuda
+    - ¿Me puedes ayudar?
+    - eres capaz de ayudarme?
+    - me podrias ayudar porfa
+    - ayudame porfa
+    - Por favor, ayúdame
+    - me tienes que ayudar 
+    - me tienes que echar una mano
+    - aiuda porfavor
+    - Tienes que ayudarme
+    - Me puedes ayudar por favor?
+    - ayuda porfavor
+    - Quiero que me
+    - Quiero que me orientes
+    - orientame porfavor
+    - kiero que me ayudes
+    - quiero q me ayudes
+    - Has de ayudarme
+    - as de ayudarme
+    - Me tienes que echar una mano
+    - Ayudame con una cosa
+    - ayudame con esto
+    - ayudame por favor
+    - necesito que me ayudes
+    - te necesito
+    - necesito que me ayudes en una csoa
+    - necesito que me ayuides
+    - necesito ayuda
+    - necesito tu ayuda
+    - hola
+    - olii
+    - hola wapa
+    - hola guapa
+    - ola guapo
+    - holla
+    - hola holitaa
+    - Hola holitaa
+    - ¡Hola salva!
+    - ¡Hola irene!
+    - ¡hola!
+    - Hola! Encantado de conocerte
+    - hola guapo
+    - hola guapo!
+    - hola guapa
+    - buen dia!
 - intent: despedidas
   examples: |
-    - cu
     - adios
     - nos vemos despues
     - chau
@@ -25,8 +119,56 @@ nlu:
     - nos veremos
     - fue un gusto
     - adios adios
+    - Nos vemos
+    - nos veremos próximamente
+    - proximamente nos veremos
+    - nos vemos pronto
+    - Hasta pronto
+    - hasta pronto!
+    - asta pronto
+    - asta la vista
+    - hasta la vista
+    - Hasta luego
+    - hasta luegoo
+    - hasta lueguito
+    - hasta luego!
+    - Adiós
+    - adios
+    - adiooos
+    - nos veeemos
+    - adios!
+    - adioos!
+    - nos vemos!
+    - adios nos vemos
+    - adiós, hasta la vista
+    - adios, nos veremos pronto
+    - hasta pronto, adios
+    - adiós adiós
+    - nos vemos muy pronto
+    - nos veremos en nada
+    - Chao
+    - chao!
+    - bye!
+    - bye
+    - xao
+    - me despido de ti
+    - Me despido
+    - me voy
+    - hasta la próxima
+    - Hasta otra
+    - hasta la otra!
+    - asta la proxima vez
+    - hasta la proxima ves
+    - Adios hatunbot
+    - adios.
+    - adiós.
+    - ¿NOs despedimos?
+    - nos vemos hatunbot
+    - besos
 - intent: afirmar
   examples: |
+    - me sirve
+    - muy amable
     - si
     - sii
     - siiii
@@ -41,6 +183,61 @@ nlu:
     - bueno si
     - efectivamente
     - si me sirvio tu ayuda
+    - Sí!
+    - Si
+    - sisi
+    - sisisisi
+    - siii
+    - sii
+    - Siii
+    - xii
+    - xi
+    - xiii
+    - Efectivamente
+    - Afirmo
+    - Por supuesto
+    - Correcto
+    - Sin duda
+    - Claro
+    - Obviamente
+    - Sip
+    - Sipp
+    - Totalmente de acuerdo
+    - Estás en lo correcto
+    - Estas en lo cierto
+    - Has acertado
+    - Sí por favor
+    - Acepto
+    - Adelante
+    - ok
+    - okii
+    - oka
+    - okay
+    - okay!
+    - okey
+    - Vale
+    - perfecto
+    - perfecto!
+    - perfectisimo!
+    - Perfecto
+    - Confirmar
+    - Lo confirmo
+    - Hecho
+    - vamos allá
+    - Claro que si
+    - yaassss
+    - yaas
+    - yeah
+    - yeaaaah
+    - Me parece bien
+    - yo también
+    - yo tambien
+    - estoy de acuerdo
+    - sep
+    - seep
+    - sepp
+    - yo creo que si
+    - Sí
 - intent: negar
   examples: |
     - no
@@ -59,27 +256,110 @@ nlu:
     - no del todo
     - creo que no pero gracias
     - la verdad no
-  
+    - No
+    - noo
+    - nooo
+    - nooooooo
+    - no lo creo
+    - lo dudo mucho
+    - nop
+    - Nop
+    - Nopp
+    - nop, para nada
+    - ni pensarlo
+    - no por favor
+    - no para nada
+    - por nada del mundo
+    - nada de nada
+    - nada
+    - en nada
+    - no necesito ayuda
+    - no quiero tu ayuda
+    - no pero gracias por preguntar
+    - no lo necesito
+    - no creo que lo necesite
+    - nadaaa
+    - no gracias
+    - No, gracias
+    - Para nada
+    - Negativo
+    - De ninguna manera
+    - De ningún modo
+    - de ningun modo
+    - en absoluto
+    - Ni por asomo
+    - Bajo ningún concepto
+    - no me refiero a eso
+    - no quero decir eso
+    - no me referia a eso
+    - no quería decir eso
+    - lo niego
+    - no tengo
+    - denegar
+    - incorrecto
+    - incorecto
+    - Todo lo contrario
+    - No quiero
+    - lo lo quiero
+    - No necesito nada
+    - No quiero nada
+    - Hoy no
+    - que va
+    - que va no creo
+    - no creo que sea posible
+    - no creo que eso sea posible
 - intent: agradecer
+  examples: |
     - Gracias
-    - Muchas gracias
-    - gracias por la ayuda
-    - graciassss
-    - muchas muchas gracias
-    - grx
-    - Era lo que necesitaba, gracias
-    - muchas gracias
-    - gracias
-    - de verdad gracias
-    - te lo agradezco
-    - Thank you
-    - Thanks
-    - Agradecido
-    - En serio gracias
-    - grax
-    - Gracias de verdad
-    - Gracias por tu ayuda
-    - Justo lo que necesitaba gracias
+    - gracias!!
+    - muchas graciias!!
+    - gracais
+    - te doy las gracias
+    - muchas gracias por tu respuesta
+    - gracias por respuesta!
+    - muchas gracias de verdad
+    - muchas gracias por todo
+    - Muchas gracias!
+    - Le agradezco
+    - estoy agradecido
+    - estoi agradecida por lo que has hecho
+    - te lo agradezco mucho
+    - Te agradezco
+    - te agradezco mucho lo que haces
+    - Mi gratitud
+    - mil gracias
+    - Me has sido de ayuda
+    - me ha servid de mucho tu ayuda
+    - ME ha servido tu ayuda
+    - Me as sido de mucha ayuda
+    - Me has prestado una gran ayuda
+    - Mis agradecimientos
+    - Gracias por la ayuda
+    - Gracias por tu aiuda
+    - Muchas gracias por responder
+    - Gracias por contestarme
+    - Muchas gracias por tu ayuda
+    - Te lo agradezco mucho
+    - Mil gracias!
+    - Gracias de todo corazón
+    - Gracias por tu aportación
+    - muchas gracias, de todo corazon
+    - de todo corazón, muchas gracias
+    - te estaré muy agradecida
+    - agradecida eternamente
+    - estaré siempre agradecido
+    - siempre estare agradecido
+    - gracias por tu aclaración
+    - Gracias.
+    - ah ya
+    - ah ya, gracias
+    - ah ya amigo
+    - muchas gracias.
+    - muchisimas gracias
+    - muchisimas gracias!
+    - mil gracias, de verdad!
+    - gracias por tu ayuda
+
 - intent: plazo_atencion
   examples: |
     - cuanto demora un tramite?
@@ -427,6 +707,7 @@ nlu:
     - [cursos dirigidos](nombre_tramite)?
     - [traslado interno de una escuela a otra de otra facultad](nombre_tramite)?
     - [traslado interno de una escuela a otra de la misma facultad](nombre_tramite)?
+    - [Traslado Externo](nombre_tramite)
 - intent: consultar_requisitos
   examples: |
     - Cuales son los requisitos para el tramite de [Silabos de Estudios en Maestrias o Doctorados](nombre_tramite)?
@@ -600,6 +881,45 @@ nlu:
     - que debo presentar para solicitar un tramite virtual
     - necesito los detalles para realizar un tramite
     - me puede detallar los requisitos para realizar un tramite
+
+- intent: decir_tramite_descripcion_st
+  examples: |
+    - en que consiste?
+    - para que es?
+    - describelo
+    - describeme 
+    - describeme porfavor
+    - de que trata?
+    - para que sirve?
+    - dime la descripcion
+    - menciona la descripcion
+
+- intent: decir_tramite_monto_st
+  examples: |
+    - cuanto cuesta?
+    - cuanto está?
+    - que precio?
+    - cuanto debo pagar?
+    - cuanto es?
+    - que cuesta?
+    - precio?
+    - dime el precio
+    - dime el monto a pagar
+    
+
+- intent: decir_tramite_requisitos_st
+  examples: |
+    - que se necesita?
+    - que necesito llevar?
+    - dime los requisitos
+    - que requisitos necesito?
+    - que requisitos?
+    - enumera los requisitos
+    - menciona los requisitos
+    - que documentos se necesita
+    - que documentos debo presentar
+  
+    
 - regex: anio
   examples: |
     - \b[0-9]{4}\b
