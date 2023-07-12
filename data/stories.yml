@@ -43,6 +43,7 @@ stories:
   - action: utter_question_b
   - intent: plazo_atencion
   - action: utter_plazo_atencion
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -56,6 +57,7 @@ stories:
   - action: utter_question_b
   - intent: plazo_atencion
   - action: utter_plazo_atencion
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -65,6 +67,7 @@ stories:
   steps:
   - intent: plazo_atencion
   - action: utter_plazo_atencion
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -74,6 +77,7 @@ stories:
   steps:
   - intent: plazo_atencion
   - action: utter_plazo_atencion
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -120,6 +124,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_bueno
@@ -153,6 +158,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_bueno
@@ -182,6 +188,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_bueno
@@ -208,6 +215,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_bueno
@@ -287,6 +295,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: negar
   - action: utter_malo
@@ -320,6 +329,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: negar
   - action: utter_malo
@@ -348,6 +358,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: negar
   - action: utter_malo
@@ -373,6 +384,7 @@ stories:
     - anio: '2023'
   - slot_was_set:
     - codigo: '144996'
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: negar
   - action: utter_malo
@@ -449,6 +461,7 @@ stories:
   - action: utter_question_b
   - intent: pregunta_solicitud_online
   - action: utter_tramite_online
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -465,6 +478,7 @@ stories:
   - action: utter_question_b
   - intent: pregunta_solicitud_online
   - action: utter_tramite_online
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -477,6 +491,7 @@ stories:
   - action: utter_question_b
   - intent: pregunta_solicitud_online
   - action: utter_tramite_online
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -486,6 +501,7 @@ stories:
   steps:
   - intent: pregunta_solicitud_online
   - action: utter_tramite_online
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -511,6 +527,7 @@ stories:
   - action: utter_question_b
   - intent: horario_atencion_tramite
   - action: utter_horario_atencion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -527,6 +544,7 @@ stories:
   - action: utter_question_b
   - intent: horario_atencion_tramite
   - action: utter_horario_atencion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -540,6 +558,7 @@ stories:
   - action: utter_question_b
   - intent: horario_atencion_tramite
   - action: utter_horario_atencion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -549,6 +568,7 @@ stories:
   steps:
   - intent: horario_atencion_tramite
   - action: utter_horario_atencion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -573,6 +593,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -589,6 +610,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -605,6 +627,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -618,6 +641,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -702,6 +726,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -726,6 +751,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -745,6 +771,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -761,6 +788,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -853,6 +881,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: duplicado de constancia de matricula
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -870,6 +899,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: duplicado de constancia de matricula
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -888,6 +918,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: duplicado de constancia de matricula
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -902,6 +933,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: duplicado de constancia de matricula
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
   - intent: afirmar
   - action: utter_denada
@@ -989,6 +1021,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1013,6 +1046,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1033,6 +1067,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1049,6 +1084,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1144,6 +1180,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: traslado externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1164,6 +1201,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: traslado externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1180,6 +1218,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: traslado externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1193,6 +1232,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: traslado externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1282,6 +1322,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: sustentacion de tesis
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1305,6 +1346,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Traslado Externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1323,6 +1365,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Traslado Externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1338,6 +1381,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Traslado Externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1428,6 +1472,7 @@ stories:
   - action: utter_question_b
   - intent: consultar_pago
   - action: utter_donde_pago
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
@@ -1444,6 +1489,7 @@ stories:
   - action: utter_question_b
   - intent: consultar_pago
   - action: utter_donde_pago
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
@@ -1456,6 +1502,7 @@ stories:
   - action: utter_question_b
   - intent: consultar_pago
   - action: utter_donde_pago
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
@@ -1465,6 +1512,7 @@ stories:
   steps:
   - intent: consultar_pago
   - action: utter_donde_pago
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: despedidas
   - action: utter_denada
@@ -1521,6 +1569,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: consultar_monto
     entities:
@@ -1528,6 +1577,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
 
 - story: mix_6
@@ -1538,6 +1588,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: consultar_requisitos
     entities:
@@ -1545,6 +1596,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Reinicio de Estudios
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help 
 
 - story: mix_7
@@ -1555,6 +1607,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Reinicio de Estudios
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: consultar_monto
     entities:
@@ -1562,6 +1615,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Recurso de Apelacion
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
 
 - story: mix_8
@@ -1572,6 +1626,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Reinicio de Estudios
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: consultar_monto
     entities:
@@ -1579,6 +1634,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Recurso de Apelacion
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: consultar_descripcion
     entities:
@@ -1586,6 +1642,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
 
 
@@ -1609,6 +1666,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: decir_tramite_requisitos
   - action: utter_que_tramite
@@ -1618,6 +1676,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1645,6 +1704,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: decir_tramite_monto
   - action: utter_que_tramite
@@ -1654,6 +1714,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Traslado Externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1681,6 +1742,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Sílabos de Estudios en Maestrías o Doctorados
   - action: action_consultar_requisitos_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: decir_tramite_monto
   - action: utter_que_tramite
@@ -1690,6 +1752,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: Traslado Externo
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1708,6 +1771,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: consultar_monto
     entities:
@@ -1715,6 +1779,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_monto_tramite
+  - intent: agradecer
   - action: utter_did_that_help
 
 
@@ -1773,6 +1838,7 @@ stories:
   - slot_was_set:
     - nombre_tramite: rotulado de diploma de titulo de segunda especialidad profesional
   - action: action_consultar_descripcion_tramite
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1784,6 +1850,7 @@ stories:
   - action: utter_question_b
   - intent: ubicacion
   - action: utter_ubicacion
+  - intent: agradecer
   - action: utter_did_that_help
   - intent: afirmar
   - action: utter_denada
@@ -1797,5 +1864,53 @@ stories:
 
 
 
+#Combinacion con slots
 
+
+- story: story_consultar_memory_combinacion1
+  steps:
+  - intent: decir_tramite_requisitos
+  - action: utter_que_tramite
+  - intent: consultar_requisitos_solotramite
+    entities:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - slot_was_set:
+    - nombre_tramite: constancia de no ser deudor a la universidad
+  - action: action_consultar_requisitos_tramite
+  - intent: decir_tramite_monto_st
+  - action: action_consultar_monto_tramite
+  - intent: decir_tramite_descripcion_st
+  - action: action_consultar_descripcion_tramite
+
+
+- story: story_consultar_memory_combinacion2
+  steps:
+  - intent: decir_tramite_descripcion
+  - action: utter_que_tramite
+  - intent: consultar_descripcion_solotramite
+    entities:
+    - nombre_tramite: nombramiento de dictaminadores de tesis para maestria, doctorado
+  - slot_was_set:
+    - nombre_tramite: nombramiento de dictaminadores de tesis para maestria, doctorado
+  - action: action_consultar_descripcion_tramite
+  - intent: decir_tramite_monto_st
+  - action: action_consultar_monto_tramite
+  - intent: decir_tramite_requisitos_st
+  - action: action_consultar_requisitos_tramite
+
+
+- story: story_consultar_memory_combinacion3
+  steps:
+  - intent: decir_tramite_monto
+  - action: utter_que_tramite
+  - intent: consultar_monto_solotramite
+    entities:
+    - nombre_tramite: Traslado Externo
+  - slot_was_set:
+    - nombre_tramite: Traslado Externo
+  - action: action_consultar_monto_tramite
+  - intent: decir_tramite_requisitos_st
+  - action: action_consultar_requisitos_tramite
+  - intent: decir_tramite_descripcion_st
+  - action: action_consultar_descripcion_tramite
 
