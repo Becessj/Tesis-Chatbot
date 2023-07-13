@@ -26,7 +26,7 @@ git clone https://github.com/Becessj/Tesis_Chatbot_Becerra_Chavez.git && cd Tesi
 
 Create and activate a Python virtual environment
 ```shell
-python3.7 -m venv ./venv && source ./venv/bin/activate
+python3.8 -m venv ./venv && source ./venv/bin/activate
 ```
 
 Upgrade `pip` and install `rasa`
