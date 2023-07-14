@@ -7,6 +7,7 @@ import requests
 import json
 import pyodbc
 import pandas as pd
+from datetime import datetime
 from unidecode import unidecode
 
 PLADDESAPI_URL = "https://tramite.unsaac.edu.pe/tramite/buscar_expediente_x_codigo"
@@ -14,15 +15,26 @@ PLADDESAPI_URL = "https://tramite.unsaac.edu.pe/tramite/buscar_expediente_x_codi
 class DefaultFallback(Action):
     def name(self):
         return "my_fallback_action"
-
+    def Save_Info(self, intent):
+        conn = pyodbc.connect("Driver={SQL Server Native Client 11.0};"
+                "Server=DESKTOP-0UKIJS0\SQLEXPRESS;"
+                "Database=DBCHATBOT;;"
+                "Trusted_Connection=yes;")
+        cursor = conn.cursor()
+        now = datetime.now()
+        formatted_date = now.strftime('%Y-%m-%d %H:%M:%S')
+        cursor.execute("INSERT INTO saved (intent,fecha)"
+                        f"VALUES ('{intent}','{formatted_date}')")
+        conn.commit()
     def run(self, dispatcher, tracker, domain):
         response = "Mmmm, no estoy seguro de lo que quieres decirme..." + "\n" + "Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de este trámite \n ● Descripción de un trámite \n ● Horarios \n"
         response2 = "o puedes acudir a mi compañero responsable a través de https://meet.google.com/yis-dkje-bxq"
-        
+        saveintent=str(tracker.latest_message['text'])
+        intent = self.Save_Info(saveintent)
+        print("Insertamos--->" + saveintent)
         dispatcher.utter_message(text=response+response2)
 
 # class ActionCustomFallback(Action):
-
 #     def name(self) -> Text:
 #         return "action_custom_fallback"
 
@@ -43,21 +55,6 @@ class DefaultFallback(Action):
 #             text="No estaba 100% claro lo que querías decir. ¿Podría especificar/reformular?",
 #             buttons=buttons
 #         )
-#         return []
-
-    
-# class ActionHelloWorld(Action):
-#     """
-#     ActionHelloWorld Recoge el nombre de usuario y ademas da un mensaje de bienvenida que se envia
-#     al modulo conversacional del Bot 
-#     """
-#     def name(self) -> Text:
-#         return "action_welcome"
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         name = tracker.get_slot('name')
-#         dispatcher.utter_message(text=f"Bienvenid@ {name}, si deseas puedo buscar requisitos, descripcion de tu tramite, o ver el estado de tu tramite ¿Qué te gustaría hacer?")
 #         return []
 
 class ActionSayName(Action):
@@ -135,9 +132,13 @@ class ActionConsultarDescripcionTramite(Action):
 
         usuario_nombre_tramite = tracker.get_slot("nombre_tramite")
         Resultado = self.Buscar_Info(usuario_nombre_tramite)
-        Nombre = Resultado["nombre"][0]
-        Descripcion = Resultado["descripcion"][0]
-        dispatcher.utter_message(text=f"El trámite {Nombre} es un {Descripcion}")
+        if(Resultado.empty):
+            dispatcher.utter_message(text=f"No encontré coincidencias, por favor ingresa el trámite correcto")
+        else:
+            Nombre = Resultado["nombre"][0]
+            Descripcion = Resultado["descripcion"][0]
+            dispatcher.utter_message(text=f"El trámite {Nombre} es un {Descripcion}")
+           
         return []
 
 class ActionConsultarMontoTramite(Action):
@@ -164,9 +165,12 @@ class ActionConsultarMontoTramite(Action):
 
         usuario_nombre_tramite = tracker.get_slot("nombre_tramite")
         Resultado = self.Buscar_Info(usuario_nombre_tramite)
-        Nombre = Resultado["nombre"][0]
-        Monto = Resultado["monto"][0]
-        dispatcher.utter_message(text=f"El costo del trámite {Nombre} es de S/.{Monto}")
+        if(Resultado.empty):
+            dispatcher.utter_message(text=f"No encontré coincidencias, por favor ingresa el trámite correcto")
+        else:
+            Nombre = Resultado["nombre"][0]
+            Monto = Resultado["monto"][0]
+            dispatcher.utter_message(text=f"El costo del trámite {Nombre} es de S/.{Monto}")
         return []
 
 class ActionConsultarRequisitosTramite(Action):
@@ -194,9 +198,12 @@ class ActionConsultarRequisitosTramite(Action):
 
         usuario_nombre_tramite = tracker.get_slot("nombre_tramite")
         Requisitos = self.Buscar_Info(usuario_nombre_tramite)
-        Nombre = Requisitos["nombre"][0]
-        Requisitos = Requisitos["requisitos"][0]
-        dispatcher.utter_message(text=f"Los requisitos del trámite {Nombre} son:\n{Requisitos}")
+        if(Requisitos.empty):
+            dispatcher.utter_message(text=f"No encontré coincidencias, por favor ingresa el trámite correcto")
+        else:
+            Nombre = Requisitos["nombre"][0]
+            Requisitos = Requisitos["requisitos"][0]
+            dispatcher.utter_message(text=f"Los requisitos del trámite {Nombre} son:\n{Requisitos}")
         return []
 
 
