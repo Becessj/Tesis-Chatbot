@@ -53,8 +53,6 @@ actions:
 - utter_no_te_entiendo
 - utter_plazo_atencion
 - utter_que_tramite
-- utter_question_a
-- utter_question_b
 - utter_saludo
 - utter_tramite_online
 - utter_ubicacion
@@ -67,10 +65,10 @@ responses:
   - text: ¡Hola amig@!👋, mi nombre es HatunBot🤖, puedes hacerme consultas respecto al trámite documentario.
   utter_goodbye:
   - text: |-
-      Nos vemos pronto, cuidate {name}.
+      Nos vemos pronto, cuidate.
       si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
   - text: |-
-      Hasta pronto {name}
+      Hasta pronto 
       si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
   - text: Hasta pronto, si te sirvió mi ayuda, espero verte pronto!
   - text: Adios, vuelve pronto!
@@ -98,9 +96,9 @@ responses:
     - title: 👎
       payload: /negar
   utter_bueno:
-  - text: Muchas gracias {name}, eso me servirá para seguir mejorando.
+  - text: Muchas gracias, eso me servirá para seguir mejorando.
   - text: Muchas gracias, eso me ayudará para continuar mejorando.
-  - text: Gracias {name}, seguiré mejorando.
+  - text: Gracias, seguiré mejorando.
   - text: Gracias, continuaré mejorando.
   - text: Que bueno, continuaré mejorando.
   utter_malo:
@@ -143,18 +141,8 @@ responses:
       Visitanos en este horario de lunes a viernes de 
       8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⏰
   - text: El horario de atención es de 8:00 a.m. - 1:00 p.m. y 3 p.m. - 5 p.m. ⌚
-  utter_question_a:
-  - text: ¿Cúal es tu nombre?
-  - text: ¿Como te llamas?
-  - text: ¿Me podrias decir tu nombre?
-  - text: Indicame tu nombre por favor
-  - text: Brindame tu nombre por favor
-  utter_question_b:
-  - text: ¿en que te puedo ayudar?
-  - text: ¿en que puedo ayudarte?
-  - text: ¿Qué deseas hacer {name} ?
-  - text: ¿Qué te gustaria hacer {name}?
-  - text: ¿Qué quisieras hacer {name}?
+
+
   utter_ubicacion:
   - text: La UNSAAC se encuentra en la Av. de La Cultura 773.
   - text: Nos ubicamos en la Av. de La Cultura 773.
