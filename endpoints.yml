@@ -10,8 +10,10 @@
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 
-#action_endpoint:
-#  url: "http://localhost:5055/webhook"
+action_endpoint:
+#aqui el puerto debe ser del 5055
+    #url: "http://localhost:5055/webhook"
+    url: "https://4d87-181-66-90-152.ngrok-free.app/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
