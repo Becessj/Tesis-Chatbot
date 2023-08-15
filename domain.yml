@@ -46,7 +46,7 @@ actions:
 - utter_denada
 - utter_did_that_help
 - utter_donde_pago
-- utter_goodbye
+#- utter_goodbye
 - utter_horario_atencion_tramite
 - utter_iamabot
 - utter_malo
@@ -58,21 +58,21 @@ actions:
 - utter_ubicacion
 responses:
   utter_saludo:
-  - text: ¡Hola!👋, mi nombre es HatunBot🤖, te ayudaré con tus dudas respecto al trámite documentario.
-  - text: ¡Hola!👋, soy HatunBot🤖, puedo resolver tus dudas respecto al trámite documentario.
-  - text: Hola👋, me llamo HatunBot🤖, estoy para ayudarte con las dudas respecto al trámite documentario.
-  - text: ¡Hola, estoy para ayudarte en tus consultas acerca del trámite documentario!👋, soy HatunBot🤖.
-  - text: ¡Hola amig@!👋, mi nombre es HatunBot🤖, puedes hacerme consultas respecto al trámite documentario.
-  utter_goodbye:
-  - text: |-
-      Nos vemos pronto, cuidate.
-      si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
-  - text: |-
-      Hasta pronto 
-      si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
-  - text: Hasta pronto, si te sirvió mi ayuda, espero verte pronto!
-  - text: Adios, vuelve pronto!
-  - text: Chau, estoy para ayudarte en cualquier momento!
+  - text: "¡Hola!👋, mi nombre es HatunBot🤖, te ayudaré con tus dudas respecto al trámite documentario. \n \n Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de un trámite \n ● Descripción de un trámite \n ● Costo de un trámite \n ● Horarios \n"
+  - text: "¡Hola!👋, soy HatunBot🤖, puedo resolver tus dudas respecto al trámite documentario. \n \n Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de un trámite \n ● Descripción de un trámite \n ● Costo de un trámite \n ● Horarios \n"
+  - text: "Hola👋, me llamo HatunBot🤖, estoy para ayudarte con tus dudas respecto al trámite documentario. \n \n Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de un trámite \n ● Descripción de un trámite \n ● Costo de un trámite \n ● Horarios \n"
+  - text: "¡Hola, estoy para ayudarte en tus consultas acerca del trámite documentario!👋, soy HatunBot🤖. \n \n Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de un trámite \n ● Descripción de un trámite \n ● Costo de un trámite \n ● Horarios \n"
+  - text: "¡Hola amig@!👋, mi nombre es HatunBot🤖. \n \n Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de un trámite \n ● Descripción de un trámite \n ● Costo de un trámite \n ● Horarios \n"
+  # utter_goodbye:
+  # - text: |-
+  #     Nos vemos pronto, cuidate.
+  #     si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
+  # - text: |-
+  #     Hasta pronto 
+  #     si te sirvió mi ayuda, puedes calificar mi interaccion por favor!
+  # - text: Hasta pronto, si te sirvió mi ayuda, espero verte pronto!
+  # - text: Adios, vuelve pronto!
+  # - text: Chau, estoy para ayudarte en cualquier momento!
   utter_no_te_entiendo:
   - text: |-
       Ups!
@@ -150,17 +150,17 @@ responses:
   - text: Se ubica en la Av. de La Cultura 773.
   - text: Av. de La Cultura 773.
   utter_anio:
-  - text: Podrías indicarme el año?
-  - text: De que año ?
-  - text: De que año lo requieres?
+  - text: Dime de que año
+  - text: De que año
+  - text: De que año lo requieres
   - text: Indicame el año por favor
-  - text: año?
+  - text: año
   utter_codigo:
-  - text: Podrías indicarme tu codigo?
-  - text: Cual es tu codigo universitario?
+  - text: Podrías indicarme tu codigo
+  - text: Cual es tu codigo universitario
   - text: Indicame tu codigo por favor
-  - text: tu codigo universitario?
-  - text: codigo?
+  - text: tu codigo universitario
+  - text: codigo
   utter_donde_pago:
   - text: Puedes pagar aqui http://servicios.unsaac.edu.pe/recaudacion/ 💻
   - text: Realiza el pago segun el trámite aqui http://servicios.unsaac.edu.pe/recaudacion/ 💻
@@ -180,16 +180,18 @@ responses:
   - text: Quizá tengas alguna observación por levantar, revisalo aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻
   - text: Revisa tu trámite aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻 , quizá tienes alguna observación
   utter_que_tramite:
-  - text: Entiendo, ¿indicame el nombre del trámite?
-  - text: ¿indicame el nombre del trámite?
-  - text: Entiendo, ¿proporcioname el nombre del trámite?
-  - text: Entiendo, ¿puedes darme el nombre del trámite?
-  - text: Entiendo, de que tramite?
+  - text: Entiendo, indicame el nombre del trámite
+  - text: indicame el nombre del trámite
+  - text: Entiendo, proporcioname el nombre del trámite
+  - text: Entiendo, dame el nombre del trámite
+  - text: Entiendo, de que tramite
 entities:
 - nombre_tramite
 - name
 - anio
 - codigo
+
+      
 slots:
   nombre_tramite:
     type: text
