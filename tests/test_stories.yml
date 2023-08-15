@@ -9,22 +9,25 @@ stories:
 - story: test 1
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es juan
-    intent: mi_nombre
-  - action: utter_question_b
-  - user: |
      por que demora mi tramite
     intent: plazo_atencion
   - action: utter_plazo_atencion
+  - user: |
+     gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
     intent: afirmar
   - action: utter_denada 
+
+- story: test 1_1
+  steps:
+  - user: |
+     por que demora mi tramite
+    intent: plazo_atencion
+  - action: utter_plazo_atencion
+
 
 - story: test 2
   steps:
@@ -35,14 +38,6 @@ stories:
 
 - story: test 3
   steps:
-  - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es cristian
-    intent: mi_nombre
-  - action: utter_question_b
   - user: |
      Que tramites tengo?
     intent: consultar_tramites
@@ -59,6 +54,9 @@ stories:
   - slot_was_set:
     - anio: 2023
   - action: action_consultar_tramites
+  - user: |
+     ah ya
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -66,32 +64,55 @@ stories:
   - action: utter_denada 
 
 
-
-- story: test 4
+- story: test 3_1
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
+     Que tramites tengo?
+    intent: consultar_tramites
+  - action: utter_codigo
   - user: |
-     mi nombre es andrea
-    intent: mi_nombre
+     mi codigo es 144991
+    intent: mi_codigo
+  - slot_was_set:
+    - codigo: 144996
+  - action: utter_anio
+  - user: |
+     del 2023
+    intent: del_anio 
+  - slot_was_set:
+    - anio: 2022
+  - action: action_consultar_tramites
 
 
+- story: story_consultar_tramites_malo_oq
+  steps:
+  - intent: consultar_tramites
+  - action: utter_codigo
+  - intent: mi_codigo
+    entities:
+    - codigo: '144996'
+  - slot_was_set:
+    - codigo: '144996'
+  - action: utter_anio
+  - intent: del_anio
+    entities:
+    - anio: '2023'
+  - slot_was_set:
+    - anio: '2023'
+  - action: action_consultar_tramites
+  - slot_was_set:
+    - anio: '2023'
+  - slot_was_set:
+    - codigo: '144996'
 - story: test 5
   steps:
-  - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es juan
-    intent: mi_nombre
-  - action: utter_question_b
   - user: |
      ¿Como puedo hacer un tramite en linea?
     intent: pregunta_solicitud_online
   - action: utter_tramite_online
+  - user: |
+     ah ya gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -101,17 +122,12 @@ stories:
 - story: test 6
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es urpy
-    intent: mi_nombre
-  - action: utter_question_b
-  - user: |
      ¿a que hora puedo realizar mi tramite?
     intent: horario_atencion_tramite
   - action: utter_horario_atencion_tramite
+  - user: |
+     mil gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -122,17 +138,12 @@ stories:
 - story: test 7
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es urpy
-    intent: mi_nombre
-  - action: utter_question_b
-  - user: |
      ¿a que hora puedo realizar mi tramite?
     intent: horario_atencion_tramite
   - action: utter_horario_atencion_tramite
+  - user: |
+     ya gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -143,19 +154,14 @@ stories:
 - story: test 8
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es cristian
-    intent: mi_nombre
-  - action: utter_question_b
-  - user: |
      para que necesito la constancia de no ser deudor a la universidad
     intent: consultar_descripcion
   - slot_was_set:
     - nombre_tramite: constancia de no ser deudor a la universidad
   - action: action_consultar_descripcion_tramite
+  - user: |
+     ahya gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -170,6 +176,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: traslado externo en maestria
   - action: action_consultar_descripcion_tramite
+  - user: |
+     ah ya
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -184,6 +193,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: primera oportunidad
   - action: action_consultar_descripcion_tramite
+  - user: |
+     gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -198,6 +210,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: rectificacion de nombre en base de datos del centro de computo
   - action: action_consultar_descripcion_tramite
+  - user: |
+     gracias ya
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -217,6 +232,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: modalidad de suficiencia
   - action: action_consultar_descripcion_tramite
+  - user: |
+     ah yaaaa gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -226,19 +244,14 @@ stories:
 - story: test 9
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es cristian
-    intent: mi_nombre
-  - action: utter_question_b
-  - user: |
       Que piden para solicitar el duplicado de constancia de matricula
     intent: consultar_requisitos
   - slot_was_set:
     - nombre_tramite: duplicado de constancia de matricula
   - action: action_consultar_requisitos_tramite
+  - user: |
+     yaaaa gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -253,6 +266,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: proceso de admision a maestrias
   - action: action_consultar_requisitos_tramite
+  - user: |
+     aaaa gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -267,6 +283,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: Acta Adicional de Estudios de Maestria o Doctorado
   - action: action_consultar_requisitos_tramite
+  - user: |
+     aaaaaaa
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -281,12 +300,14 @@ stories:
   - slot_was_set:
     - nombre_tramite: Carne de Biblioteca para Egresados
   - action: action_consultar_requisitos_tramite
+  - user: |
+     ayaaaa
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
     intent: afirmar
   - action: utter_denada 
-
 #falta test stories de que tramite aumentar con 3 tramites mas
 - story: test 9_2
   steps:
@@ -296,32 +317,60 @@ stories:
   - action: utter_que_tramite
   - user: |
       proceso de admision a maestrias
-    intent: consultar_requisitos
+    intent: consultar_requisitos_solotramite
   - slot_was_set:
     - nombre_tramite: proceso de admision a maestrias
   - action: action_consultar_requisitos_tramite
+  - user: |
+     gracias ya
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
     intent: afirmar
   - action: utter_denada 
 
-- story: test 10
+- story: test 9_3
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
+      que documentos necesito para un tramite
+    intent: decir_tramite_requisitos
+  - action: utter_que_tramite
   - user: |
-     mi nombre es cristian
-    intent: mi_nombre
-  - action: utter_question_b
+      proceso de admision a maestrias
+    intent: consultar_requisitos_solotramite
+  - slot_was_set:
+    - nombre_tramite: proceso de admision a maestrias
+  - action: action_consultar_requisitos_tramite
+  - user: |
+      cuanto cuesta
+    intent: decir_tramite_monto_st
+  - action: action_consultar_monto_tramite
+  - user: |
+      en que consiste?
+    intent: decir_tramite_descripcion_st
+  - action: action_consultar_descripcion_tramite
+  - user: |
+     ah ya
+    intent: agradecer
+  - action: utter_did_that_help
+  - user: |
+     si gracias
+    intent: afirmar
+  - action: utter_denada 
+
+
+- story: test 10
+  steps:
   - user: |
       Cuanto es el costo del tramite traslado externo
     intent: consultar_monto
   - slot_was_set:
     - nombre_tramite: traslado externo
   - action: action_consultar_monto_tramite
+  - user: |
+     excelente
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -336,6 +385,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: traslado externo
   - action: action_consultar_monto_tramite
+  - user: |
+     perfecto
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -349,7 +401,9 @@ stories:
     intent: consultar_monto
   - slot_was_set:
     - nombre_tramite: Ficha de Seguimiento Academico
-  - action: action_consultar_monto_tramite
+  - user: |
+     aya
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -364,6 +418,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: Duplicado de Acta de Evaluacion
   - action: action_consultar_monto_tramite
+  - user: |
+     gracias amig
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -382,6 +439,9 @@ stories:
   - slot_was_set:
     - nombre_tramite: Ficha de Seguimiento Academico
   - action: action_consultar_monto_tramite
+  - user: |
+     graciassd
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
@@ -391,21 +451,42 @@ stories:
 - story: test 11
   steps:
   - user: |
-      hola
-    intent: saludo
-  - action: utter_question_a
-  - user: |
-     mi nombre es juan
-    intent: mi_nombre
-  - action: utter_question_b
-  - user: |
      donde pago?
     intent: consultar_pago
+  - action: utter_donde_pago
+  - user: |
+     gracias
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
     intent: afirmar
   - action: utter_denada 
+
+- story: test 11_1
+  steps:
+  - user: |
+     donde pago?
+    intent: consultar_pago
+  - action: utter_donde_pago
+  - user: |
+     gracias
+    intent: agradecer
+  - action: utter_did_that_help
+  - user: |
+     chau
+    intent: despedidas
+  - action: utter_denada 
+
+
+
+- story: test 11_2
+  steps:
+  - user: |
+     donde pago?
+    intent: consultar_pago
+  - action: utter_donde_pago
+ 
 
 - story: test 11
   steps:
@@ -413,11 +494,22 @@ stories:
       necesito ir a la UNSAAC
     intent: ubicacion
   - action: utter_ubicacion
+  - user: |
+     perfect
+    intent: agradecer
   - action: utter_did_that_help
   - user: |
      si gracias
     intent: afirmar
   - action: utter_denada 
+
+- story: test 11_!
+  steps:
+  - user: |
+      donde esta la UNSAAC
+    intent: ubicacion
+  - action: utter_ubicacion
+
 
 
 - story: test 12
@@ -449,4 +541,29 @@ stories:
      eres un bot?
     intent: bot_duda
   - action: utter_iamabot
+
+
+
+- story: test 16
+  steps:
+  - user: |
+     adios
+    intent: despedidas
+  - action: utter_ask_feedback
+  - user: |
+     si
+    intent: afirmar
+  - action: utter_bueno
+
+
+- story: test 17
+  steps:
+  - user: |
+     adios
+    intent: despedidas
+  - action: utter_ask_feedback
+  - user: |
+     no
+    intent: negar
+  - action: utter_malo
 
