@@ -27,7 +27,7 @@ class DefaultFallback(Action):
                         f"VALUES ('{intent}','{formatted_date}')")
         conn.commit()
     def run(self, dispatcher, tracker, domain):
-        response = "Mmmm, no estoy seguro de lo que quieres decirme..." + "\n" + "Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de este trámite \n ● Descripción de un trámite \n ● Horarios \n"
+        response = "Mmmm, no estoy seguro de lo que quieres decirme..." + "\n" + "Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de un trámite \n ● Descripción de un trámite \n ● Costo de un trámite \n ● Horarios \n"
         response2 = "o puedes acudir a mi compañero responsable a través de https://meet.google.com/yis-dkje-bxq"
         saveintent=str(tracker.latest_message['text'])
         intent = self.Save_Info(saveintent)
@@ -260,4 +260,5 @@ class ActionRestart(Action):
          return [Restarted()]
 
 
- 
+
+
