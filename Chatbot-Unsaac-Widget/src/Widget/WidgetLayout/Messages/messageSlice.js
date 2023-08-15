@@ -120,7 +120,8 @@ export const messagesSlice = createSlice({
         }
       } else {
         state.messages.push({
-          text: "Desafortunadamente, estoy teniendo un problema 😅. Te agradecería si pudieras volver a intentarlo más tarde.",
+          //text: "Mmmm, no estoy seguro de lo que quieres decirme..." + "\n" + "Me puedes preguntar:  \n ● Mis trámites \n  ● Información de mi trámite \n ● Requisitos de un trámite \n ● Descripción de un trámite \n ● Costo de un trámite \n ● Horarios \n o puedes acudir a mi compañero responsable a través de https://meet.google.com/yis-dkje-bxq",
+          text: "Desafortunadamente, estoy teniendo un problema de conexión 😅 . Te agradecería si pudieras volver a intentarlo más tarde.",
           sender: "BOT",
           type: "text",
           ts: new Date(),

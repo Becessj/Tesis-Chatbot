@@ -31,8 +31,10 @@
         (e.onload = () => {
           window.ChatbotWidget.default({
             /* aqui el puerto debe ser del 5005 */
-            rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
+            //rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
+            rasaServerUrl: "https://e4ab-181-66-90-152.ngrok-free.app/webhooks/rest/webhook",
             userId: "cristian",
+            // initialPayload: "/saludo",
             initialPayload: "/saludo",
             metadata: {},
             botAvatar:
