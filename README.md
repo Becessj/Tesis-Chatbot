@@ -61,6 +61,26 @@ rasa shell --endpoints endpoints.yml
 
 # Use-cases
 
+## Atencion de un tramite
+
+**User**: que debo hacer si no atienden mi solicitud dentro del plazo
+
+**Bot**: Disculpa por el inconveniente, quizá tengas alguna observación por levantar, revisalo aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻
+
+## Conexion al servicio de PLADDES (List trámites)
+
+**User**: que tramites tengo?
+
+**Bot**: Podrías indicarme tu codigo?
+
+**User**: 144996 (*código valido*)
+
+**Bot**: De que año ?
+
+**User**: del 2023
+
+**Bot**: *lista de trámites*
+        
 ## Requisitos de un tramite
 
 **User**: Que requisitos necesito para sacar mi Constancia de Estudios de Maestria o Doctorado?
