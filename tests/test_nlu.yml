@@ -1,0 +1,256 @@
+version: "3.1"
+nlu:
+- intent: saludo
+  examples: |
+    - olaa
+    - que tal, buenos días
+    - hola hola
+    - Buenas nochesssss
+    - ¿Cómo has estado?
+    - ei
+
+- intent: despedidas
+  examples: |
+    - ads
+    - adew
+    - hasta mñn
+    - Hasta la vista
+    - Hablamos
+    - Adiosssss
+
+- intent: afirmar
+  examples: |
+    - me sirveeee
+    - me sirvio
+    - si que si
+    - si amigo
+    - pues si
+    - siiiiiiiiiii
+
+- intent: negar
+  examples: |
+    - no no noooooo
+    - no nada
+    - nada de nada
+    - no nadita
+    - naaaa
+    - no amigo
+
+- intent: agradecer
+  examples: |
+    - gracss
+    - Mil graciaaas
+    - Un millon de gracias
+    - thanks
+    - Muchisisisimas gracias
+    - No tengo palabras para agradecerte
+
+- intent: plazo_atencion
+  examples: |
+    - cuanto mas debo esperar por mi tramite
+    - cuanto demora un tramite en la universidad
+    - paso mucho tiempo
+    - espero mucho por mi tramite
+    - no avanza mi tramite
+    - ya espere un mes por mi tramite
+
+- intent: bot_duda
+  examples: |
+    - no eres un humano cierto?
+    - eres un robot?
+    - pareces una maquina
+    - no eres una persona
+    - escribes como un robot
+    - no pareces un humano
+
+- intent: consultar_tramites
+  examples: |
+    - quiero ver mis tramites
+    - necesito saber mis tramites
+    - cuantos tramites tengo
+    - que tramites?
+    - tramitesss
+    - cuantos tramites tengo
+
+- intent: mi_codigo
+  examples: |
+    - [144993](codigo)
+    - [135478](codigo)
+    - [175849](codigo)
+    - este es mi codigo [13456](codigo)
+    - codigo [13475](codigo)
+    - te doy mi codigo [12478](codigo)
+
+- intent: del_anio
+  examples: |
+    - es del año [2022](anio)
+    - en el año [2019](anio)
+    - de [2005](anio)
+    - en [2017](anio)
+    - [2011](anio)
+    - [2004](anio)
+
+- intent: pregunta_solicitud_online
+  examples: |
+  
+    - quiero realizar un tramite en linea?
+    - puedo hacer tramites en linea?
+    - quiero realizar tramites 
+    - que debo hacer para dejar tramite en linea?
+    - realizar mi tramite
+    - proceso de solicitud en linea
+
+- intent: horario_atencion_tramite
+  examples: |
+    - dame el horario de atencion
+    - el horario de atencion es todo el dia
+    - horario de atencion
+    - dime la hora de atencion
+    - se cerró el sistema
+
+- intent: consultar_descripcion
+  examples: |
+    - describeme el tramite de [Copia Visada de Sílabos](nombre_tramite)?
+    - que son los[Derechos de enseñanza Segunda Especialidad Derechos de enseñanza Segunda Especialidad Educación Especial y Conservación y Restauración de Inmuebles](nombre_tramite)?
+    - dime de que trata el [Acta Adicional de Estudios de Maestría o Doctorado](nombre_tramite)?
+    - dame la descripcion de la [Carta de Presentación de Decano](nombre_tramite)
+    - explicame acerca de la [Subsanacion de Asignaturas (para estudiantes por egresar)](nombre_tramite)?
+    - dame una explicacion de la [Homologación de Asignaturas](nombre_tramite)?
+   
+- intent: consultar_descripcion_solotramite
+  examples: |
+    - [Reserva de Matricula](nombre_tramite)?
+    - [Calificacion de Expediente para Optar el Grado Academico de Bachiller y Rotulado de Diploma](nombre_tramite)?
+    - [Revalida de Titulos y Grados](nombre_tramite)?
+    - [Renuncia](nombre_tramite)
+    - [Recurso de Apelacion](nombre_tramite)?
+    - [Matricula de Ingresante](nombre_tramite)?
+    
+- intent: consultar_monto
+  examples: |
+    - que cuesta la [Certificacion de Copia de Diploma](nombre_tramite)?
+    - costo del [Carne de Biblioteca](nombre_tramite)?
+    - dame el precio del [Reinicio de Estudios](nombre_tramite)?
+    - dime el costo de la [Matrícula de Alumnos Regulares](nombre_tramite)?
+    - costo del [Recurso de Reconsideracion](nombre_tramite)?
+    - monto a pagar de la [Copia Visada de Silabos](nombre_tramite)?
+    
+    
+- intent: consultar_monto_solotramite
+  examples: |
+    - [Matricula de Alumno con Traslado Externo](nombre_tramite)?
+    - [Solicitudes Derivadas de los Derechos Pensionarios del Decreto Ley N° 20530 : Incorporacion](nombre_tramite)?
+    - [Constancia de Ingreso](nombre_tramite)?
+    - [Cese por Fallecimiento y Pago de Beneficios Sociales](nombre_tramite)?
+    - [Constancia de Créditos Acumulados o de Egresado](nombre_tramite)?
+    - [Ficha de Seguimiento de Maestria y Doctorado](nombre_tramite)?
+    
+- intent: consultar_requisitos
+  examples: |
+    - dame los requisitos para el [Duplicado de Constancia de Notas](nombre_tramite)?
+    - requisitos del [Reinicio de Estudios](nombre_tramite)
+    - que requisitos se necesita para la [Anotación Marginal en diploma de Grados Académicos, Título Profesional y Título de Segunda Especialidad](nombre_tramite)
+    - requisitos para sacar la [Constancia de Tercio, Quinto y Decimo Superior](nombre_tramite)?
+    - requisitos para la [Determinación de Fecha, Hora y Lugar para Sustentación de Tesis o Examen de Suficiencia Profesional o Examen por Servicios a Nivel Profesional](nombre_tramite)?
+    - detallame los requisitos del [Proceso de Admisión a Maestrías](nombre_tramite)?
+    
+- intent: consultar_requisitos_solotramite
+  examples: |
+    - [Residentado Médico: Mensualidad en Segunda Especialización de Medicina Humana - Residentado Médico](nombre_tramite)?
+    - [Certificado de Estudios de la Segunda Especialidad Profesional](nombre_tramite)
+    - [Nombramiento de Dictaminadores de Tesis para Maestría, Doctorado](nombre_tramite)
+    - [Proceso de Admisión a Doctorados](nombre_tramite)?
+    - [Reinicio de Estudios en Maestría o Doctorado](nombre_tramite)?
+    - [Carné de Biblioteca](nombre_tramite)?
+    
+- intent: consultar_pago
+  examples: |
+    - quiero pagar?
+    - para realizar el pago
+    - pagar por internet
+    - pagare con tarjeta
+    - para realizar el pago por internet
+    - necesito pagar ahora
+
+- intent: feed_back
+  examples: |
+    - tu ayuda fue genial
+    - hay que mejorar
+    - necesitas algunas modificaciones
+    - debes mejorar
+    - me gustaria que seas mas lento
+    - eres muy bueno
+
+- intent: sugerencia
+  examples: |
+    - podrias realizar notificaciones
+    - seria interesante si podrias comunicarte mediante voz
+    - si proporcionas detalles de los tramites seria genial
+    - seria genial si podrias recordar consultas pasadas
+    - la atencion con un humano ayudaria mucho
+    - podrias sugerir otras consultas
+
+- intent: ubicacion
+  examples: |
+    - dame la dirección de la UNSAAC
+    - direccion de la UNSAAC
+    - ir a la UNSAAC
+    - ubicacion UNSAAC
+    - llegar a la UNSAAC
+    - direccion UNSAAC
+
+- intent: decir_tramite_descripcion
+  examples: |
+    - consultar por un tramite
+    - para que es un tramite
+    - explicame un tramite
+    - especifica de que trata un tramite
+    - detalla para que sirve un tramite
+    - explica un tramite
+
+- intent: decir_tramite_monto
+  examples: |
+    - cuanto vale un tramite
+    - que precio cuesta hacer un tramite
+    - costo de un tramite
+    - monto del tramite
+    - importe de un tramite
+    - cuanto pagar por un tramite
+
+- intent: decir_tramite_requisitos
+  examples: |
+    - requisitos de un tramite
+    - menciona los requisitos para un tramite
+    - requisitos necesarios para un tramite
+    - que requisitos debo llevar para un tramite
+    - documentos necesarios para un tramite
+    - requisitos para presentar un tramite
+
+- intent: decir_tramite_descripcion_st
+  examples: |
+    - descripcion?
+    - describelo
+    - menciona descripcion
+    - describe 
+    - cual es su descripcion
+    - explica la descripcion
+
+- intent: decir_tramite_monto_st
+  examples: |
+    - costo?
+    - que costo tiene?
+    - cuanto es el precio?
+    - monto a pagar?
+    - cuanto vale?
+    - preciooo?
+
+- intent: decir_tramite_requisitos_st
+  examples: |
+    - requisitos necesarios?
+    - que llevar?
+    - requisitos porfavor
+    - menciona los requisitos
+    - dime los requisitos?
+    - requisitosss
+    
+
