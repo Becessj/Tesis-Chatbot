@@ -81,7 +81,7 @@ rasa shell --endpoints endpoints.yml
 
 **Bot**: *lista de trámites*
         
-## Requisitos de un tramite
+## Requisitos de un trámite
 
 **User**: Que requisitos necesito para sacar mi Constancia de Estudios de Maestria o Doctorado?
 
@@ -90,19 +90,19 @@ rasa shell --endpoints endpoints.yml
         2.- Pago por derechos de constancia de estudios de Maestría o Doctorado.
 
 
-## Descripcion de un tramite
+## Descripcion de un trámite
 
 **User**: En que consiste el tramite de rotulado de diploma de titulo de segunda especialidad profesional?
 
 **Bot**: El trámite Rotulado de diploma de Título de Segunda Especialidad Profesional es un Procedimiento a través del cual, la UNSAAC emite los diplomas de Segunda Especialidad Profesional en los cuales se consigna toda la información requerida mediante reglamento respectivo, así como se le asigna el código de barras y número correlativo con el objetivo de realizar su inscripción en SUNEDU.
 
-## Costo de un tramite
+## Costo de un trámite
 
 **User**: Cuanto es el costo del tramite traslado Externo
 
 **Bot**: El costo del trámite Traslado Externo es de S/.450.0
 
-## Memoria y contexto del bot, relacionado a un tramite
+## Memoria y contexto del bot, relacionado a un trámite
 
 **User**: que requisitos necesito para un tramite?
 
