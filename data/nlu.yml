@@ -404,6 +404,8 @@ nlu:
     - quiero verificar mi tramite?
     - que tramites tengo?
     - que tramites hay?
+    - mis tramites
+    - informacion de mi tramite
 
 - intent: mi_codigo
   examples: |
@@ -773,9 +775,13 @@ nlu:
 - intent: decir_tramite_requisitos
   examples: |
     - me puedes indicar los requisitos de un tramite
+    - requisitos de un tramite
     - cuales son los requisitos para un tramite
     - que requisitos necesito para un tramite
     - que requisitos necesito
+    - y que necesito
+    - que necesito
+    - que debo llevar
     - que documentos necesito para un tramite
     - que requisitos son para un tramite
     - que necesito presentar para un tramite virtual
