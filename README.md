@@ -61,13 +61,13 @@ rasa shell --endpoints endpoints.yml
 
 # Use-cases
 
-## Atencion de un tramite
+## Atención de un trámite
 
 **User**: que debo hacer si no atienden mi solicitud dentro del plazo
 
 **Bot**: Disculpa por el inconveniente, quizá tengas alguna observación por levantar, revisalo aqui https://tramite.unsaac.edu.pe/tramite/seguimiento 💻
 
-## Conexion al servicio de PLADDES (List trámites)
+## Conexión al servicio de PLADDES (Lista trámites)
 
 **User**: que tramites tengo?
 
@@ -102,7 +102,7 @@ rasa shell --endpoints endpoints.yml
 
 **Bot**: El costo del trámite Traslado Externo es de S/.450.0
 
-## Memoria y contexto del bot, relacionado a un trámite
+## Memoria y contextualización del bot, relacionado a un trámite
 
 **User**: que requisitos necesito para un tramite?
 
