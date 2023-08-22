@@ -2,7 +2,7 @@
 Este chatbot está siendo desarrollado por Eber Chavez y Cristian Becerra como parte de la tesis de la UNSAAC Universidad Nacional de San Antonio Abad del Cusco. Python, RASA, React JS, API
 <div align="center">
   <br>
-  <img style="width: 60%" title="VIHrtul-App screenshot" alt="VIHrtual-App screenshot" src="Chatbot-Unsaac-Widget/banner1.png">
+  <img style="width: 60%" title="VIHrtul-App screenshot" alt="VIHrtual-App screenshot" src="Widget/banner1.png">
 </div>
 
 ## PreGrado 2022-2023
